@@ -1,4 +1,5 @@
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link as RouterLink, useSearchParams  } from 'react-router-dom';
+import { Link as MuiLink } from '@mui/material';
 import Game from '../components/Game';
 import { getTankImage } from '../core/tanks';
 
@@ -10,7 +11,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Game tankImage={tankImage} />
-      <Link to="/tanks">Play any tank</Link>
+      <MuiLink to="/tanks" component={RouterLink}>Play any tank</MuiLink>
     </>
   );
 };

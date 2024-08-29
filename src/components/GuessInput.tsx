@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
+import { Autocomplete, TextField, Button } from '@mui/material';
+
+import { tanks } from '../core/tanks';
+
+const suggestions = tanks.map(tank => tank.name)
 
 interface GuessInputProps {
   onGuessSubmit: (guess: string) => void;
 }
 
-const GuessInput = ({ onGuessSubmit }: GuessInputProps) => {
+const GuessInput: React.FC<GuessInputProps> = ({ onGuessSubmit }) => {
   const [guess, setGuess] = useState('');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setGuess(e.target.value);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleInputChange = (_: any, value: string) => {
+    setGuess(value);
+  };
+
+  const handleSubmit = () => {
+    onGuessSubmit(guess);
+    setGuess('');
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -17,21 +28,30 @@ const GuessInput = ({ onGuessSubmit }: GuessInputProps) => {
     }
   };
 
-  const handleSubmit = () => {
-    onGuessSubmit(guess);
-    setGuess('');
-  };
-
   return (
     <div className="guess-input">
-      <input
-        type="text"
-        value={guess}
-        onChange={handleInputChange}
-        onKeyDown={handleKeyDown}
-        placeholder="Enter your guess"
+      <Autocomplete
+        freeSolo
+        options={suggestions}
+        inputValue={guess}
+        onInputChange={handleInputChange}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Enter your guess"
+            variant="outlined"
+            onKeyDown={handleKeyDown}
+          />
+        )}
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <Button
+        onClick={handleSubmit}
+        variant="contained"
+        color="primary"
+        style={{ marginTop: '8px' }}
+      >
+        Submit
+      </Button>
     </div>
   );
 };

@@ -1,5 +1,6 @@
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as MuiLink } from '@mui/material';
 import { tankImages } from '../core/tanks';
-import { Link } from 'react-router-dom';
 
 const Tanks = () => {
   return (
@@ -7,10 +8,11 @@ const Tanks = () => {
       <h3>Play any tank</h3>
       {
         tankImages.map((tankImage, ix) => (
-          <Link
+          <MuiLink
+            component={RouterLink}
             to={`/?tank=${ix+1}`}
             key={tankImage.tank.name}
-          >{ix+1}</Link>
+          >{ix+1}</MuiLink>
         ))
       }
     </div>
