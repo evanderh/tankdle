@@ -3,26 +3,26 @@ import ImageDisplay from './ImageDisplay';
 import GuessInput from './GuessInput';
 import Feedback from './Feedback';
 
-import { Tank } from "../core/tanks";
+import { TankImage } from "../core/tanks";
 import { checkGuess } from '../core/logic';
 
 interface Props {
-  tank: Tank,
+  tankImage: TankImage,
 }
 
-const Game = ({ tank }: Props) => {
+const Game = ({ tankImage }: Props) => {
   const [feedback, setFeedback] = useState('');
 
   const handleGuessSubmit = (guess: string) => {
-    const result = checkGuess(guess, tank);
+    const result = checkGuess(guess, tankImage.tank);
     setFeedback(result);
   };
 
   return (
     <>
       <ImageDisplay
-        imageUrl={tank.url}
-        attribution={tank.attribution}
+        imageUrl={tankImage.url}
+        attribution={tankImage.attribution}
       />
       <GuessInput onGuessSubmit={handleGuessSubmit} />
       <Feedback feedback={feedback} />

@@ -1,4 +1,4 @@
-import { tanks } from '../core/tanks';
+import { tankImages } from '../core/tanks';
 import { Link } from 'react-router-dom';
 
 const Tanks = () => {
@@ -6,10 +6,10 @@ const Tanks = () => {
     <div>
       <h3>Play any tank</h3>
       {
-        tanks.map((tank, ix) => (
+        tankImages.map((tankImage, ix) => (
           <Link
             to={`/?tank=${ix+1}`}
-            key={tank.name}
+            key={tankImage.tank.name}
           >{ix+1}</Link>
         ))
       }
