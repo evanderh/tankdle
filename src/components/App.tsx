@@ -1,29 +1,13 @@
-import React, { useState } from 'react';
-import ImageDisplay from './ImageDisplay';
-import GuessInput from './GuessInput';
-import Feedback from './Feedback';
-import { checkGuess } from '../core/logic';
-import { getTankImage } from '../core/images';
+import Game from './Game';
+import { getDailyTank } from '../core/tanks';
 
-const tank = getTankImage();
+const tank = getDailyTank();
 
 const App: React.FC = () => {
-  const [feedback, setFeedback] = useState('');
-
-  const handleGuessSubmit = (guess: string) => {
-    const result = checkGuess(guess, tank.name);
-    setFeedback(result);
-  };
-
   return (
-    <div className="App">
+    <div className="app">
       <h1>Tankdle</h1>
-      <ImageDisplay
-        imageUrl={tank.url}
-        attribution={tank.attribution}
-      />
-      <GuessInput onGuessSubmit={handleGuessSubmit} />
-      <Feedback feedback={feedback} />
+      <Game tank={tank} />
     </div>
   );
 };

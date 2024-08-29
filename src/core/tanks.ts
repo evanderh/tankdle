@@ -23,7 +23,7 @@ export const tankImages: Tank[] = [
   },
 ];
 
-export const getTankImage = (): Tank => {
+export const getDailyTank = (): Tank => {
   const daysSince = daysSinceStartDate();
   return tankImages[daysSince % tankImages.length];
 };
