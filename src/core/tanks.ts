@@ -6,7 +6,7 @@ export type Tank = {
   attribution?: string;
 };
 
-export const tankImages: Tank[] = [
+export const tanks: Tank[] = [
   {
     url: 'tanks/tank3.jpg',
     name: 'Bob Semple',
@@ -23,7 +23,12 @@ export const tankImages: Tank[] = [
   },
 ];
 
-export const getDailyTank = (): Tank => {
+export const getTank = (index: string | null): Tank => {
+  if (index) {
+    const ix = Number(index) - 1;
+    return tanks[ix];
+  }
+
   const daysSince = daysSinceStartDate();
-  return tankImages[daysSince % tankImages.length];
+  return tanks[daysSince % tanks.length];
 };
