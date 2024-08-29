@@ -1,8 +1,9 @@
 interface Props {
   imageUrl: string;
+  attribution?: string
 }
 
-const ImageDisplay = ({ imageUrl }: Props) => {
+const ImageDisplay = ({ imageUrl, attribution }: Props) => {
   return (
     <div className="image-display">
       <img
@@ -10,6 +11,9 @@ const ImageDisplay = ({ imageUrl }: Props) => {
         src={imageUrl}
         alt="Tank of the day"
       />
+      {attribution && (
+        <p dangerouslySetInnerHTML={{ __html: attribution }} />
+      )}
     </div>
   );
 };
