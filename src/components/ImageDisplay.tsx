@@ -1,17 +1,20 @@
+import { GameStatus } from "./Game";
+
 interface Props {
   imageUrl: string;
-  attribution?: string
+  attribution?: string,
+  status: GameStatus,
 }
 
-const ImageDisplay = ({ imageUrl, attribution }: Props) => {
+const ImageDisplay = ({ imageUrl, attribution, status }: Props) => {
   return (
     <div className="image-display">
       <img
-        width={640}
+        width={480}
         src={imageUrl}
         alt="Tank of the day"
       />
-      {attribution && (
+      {attribution && status !== 'playing' && (
         <p dangerouslySetInnerHTML={{ __html: attribution }} />
       )}
     </div>

@@ -10,8 +10,8 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Game tankImage={tankImage} />
       <MuiLink to="/tanks" component={RouterLink}>Play any tank</MuiLink>
+      <Game tankImage={tankImage} />
     </>
   );
 };
