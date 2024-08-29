@@ -11,6 +11,12 @@ const GuessInput = ({ onGuessSubmit }: GuessInputProps) => {
     setGuess(e.target.value);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSubmit();
+    }
+  };
+
   const handleSubmit = () => {
     onGuessSubmit(guess);
     setGuess('');
@@ -22,6 +28,7 @@ const GuessInput = ({ onGuessSubmit }: GuessInputProps) => {
         type="text"
         value={guess}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
         placeholder="Enter your guess"
       />
       <button onClick={handleSubmit}>Submit</button>

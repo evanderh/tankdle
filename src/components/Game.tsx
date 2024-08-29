@@ -14,7 +14,7 @@ const Game = ({ tank }: Props) => {
   const [feedback, setFeedback] = useState('');
 
   const handleGuessSubmit = (guess: string) => {
-    const result = checkGuess(guess, tank.name);
+    const result = checkGuess(guess, tank);
     setFeedback(result);
   };
 
