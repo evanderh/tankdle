@@ -26,7 +26,9 @@ export const tanks: Tank[] = [
 export const getTank = (index: string | null): Tank => {
   if (index) {
     const ix = Number(index) - 1;
-    return tanks[ix];
+    if (!Number.isNaN(ix)) {
+      return tanks[ix % tanks.length];
+    }
   }
 
   const daysSince = daysSinceStartDate();
