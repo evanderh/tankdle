@@ -1,7 +1,7 @@
 import { Divider, Stack } from "@mui/material";
 import { Tank } from "../core/tanks";
 import { GameStatus } from "./Game";
-import Guess from "./Guess";
+import GuessFeedback from "./Guess";
 
 interface Props {
   guesses: string[];
@@ -27,7 +27,7 @@ const Feedback = ({ guesses, status, tank }: Props) => {
         spacing={1}
       >
         {guesses.slice().reverse().map(guess => (
-          <Guess
+          <GuessFeedback
             key={guess}
             guess={guess}
             answerTank={tank}

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Autocomplete, TextField, Button, Grid2 } from '@mui/material';
 
 import { tanks } from '../core/tanks';
 import { GameStatus } from './Game';
 
-const suggestions = tanks.map(tank => tank.name)
+const suggestions = tanks.map(tank => tank.name).sort()
 
 interface Props {
   onGuessSubmit: (guess: string) => void;
