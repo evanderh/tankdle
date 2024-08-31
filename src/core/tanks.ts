@@ -20,6 +20,11 @@ export enum TankOrigin {
   Romania = 'Romania',
   Taiwan = 'Taiwan',
   Iran = 'Iran',
+  Pakistan = 'Pakistan',
+  Egypt = 'Egypt',
+  Ukraine = 'Ukraine',
+  SouthKorea = 'South Korea',
+  NorthKorea = 'North Korea',
 }
 
 export enum TankType {
@@ -75,18 +80,7 @@ const BobSemple: Tank = {
   speed: [24, 15],
 };
 
-const M1Abrams: Tank = {
-  name: 'M1 Abrams',
-  url: 'https://en.wikipedia.org/wiki/M1_Abrams',
-  type: TankType.MBT,
-  year: 1980,
-  origin: TankOrigin.USA,
-  count: 10300,
-  mass: 54,
-  engine: 1500,
-  range: [426, 265],
-  speed: [72, 45],
-};
+
 
 const T14Armata: Tank = {
   name: 'T-14 Armata',
@@ -361,19 +355,6 @@ const VickersMark3: Tank = {
   speed: [50, 31],
 };
 
-const MerkavaMark1_2: Tank = {
-  name: 'Merkava Mark I/II',
-  url: 'https://en.wikipedia.org/wiki/Merkava',
-  type: TankType.MBT,
-  year: 1977,
-  origin: TankOrigin.Israel,
-  count: 780,
-  mass: 60,
-  engine: 908,
-  range: [500, 310],
-  speed: [46, 29]
-};
-
 const Type80_88: Tank = {
   name: 'Type 80/88',
   url: 'https://en.wikipedia.org/wiki/Type_80/88_main_battle_tank',
@@ -479,7 +460,7 @@ const CM12: Tank = {
 };
 
 const ZulfiqarI: Tank = {
-  name: 'Zulfiqar',
+  name: 'Zulfiqar I',
   url: 'https://en.wikipedia.org/wiki/Zulfiqar_(tank)',
   type: TankType.MBT,
   year: 1993,
@@ -491,7 +472,287 @@ const ZulfiqarI: Tank = {
   speed: [65, 40],
 };
 
+const Type72Z: Tank = {
+  name: 'Type 72Z',
+  url: 'https://en.wikipedia.org/wiki/Type_72Z',
+  type: TankType.MBT,
+  year: 1996,
+  origin: TankOrigin.Iran,
+  count: 400,
+  mass: 36,
+  engine: 780,
+  range: [440, 275],
+  speed: [65, 40],
+};
+
+const AlZarrar: Tank = {
+  name: 'Al-Zarrar',
+  url: 'https://en.wikipedia.org/wiki/Al-Zarrar_tank',
+  type: TankType.MBT,
+  year: 2003,
+  origin: TankOrigin.Pakistan,
+  count: 750,
+  mass: 44,
+  engine: 730,
+  range: [450, 280],
+  speed: [65, 40],
+};
+
+const RamsesII: Tank = {
+  name: 'Ramses II',
+  url: 'https://en.wikipedia.org/wiki/Ramses_II_tank',
+  type: TankType.MBT,
+  year: 2004,
+  origin: TankOrigin.Egypt,
+  count: 425,
+  mass: 48,
+  engine: 908,
+  range: [530, 330],
+  speed: [69, 43],
+};
+
+const T80: Tank = {
+  name: 'T-80',
+  url: 'https://en.wikipedia.org/wiki/T-80',
+  type: TankType.MBT,
+  year: 1975,
+  origin: TankOrigin.Soviet,
+  count: 5500,
+  mass: 43,
+  engine: 1000,
+  range: [335, 208],
+  speed: [80, 50],
+};
+
+const T84: Tank = {
+  name: 'T-84',
+  url: 'https://en.wikipedia.org/wiki/T-84',
+  type: TankType.MBT,
+  year: 1994,
+  origin: TankOrigin.Ukraine,
+  count: 425,
+  mass: 51,
+  engine: 1200,
+  range: [500, 310],
+  speed: [70, 43],
+};
+
+const Leopard2: Tank = {
+  name: 'Leopard 2',
+  url: 'https://en.wikipedia.org/wiki/Leopard_2',
+  type: TankType.MBT,
+  year: 1979,
+  origin: TankOrigin.WestGermany,
+  count: 3600,
+  mass: 62,
+  engine: 1500,
+  range: [340, 210],
+  speed: [70, 43],
+};
+
+const M1Abrams: Tank = {
+  name: 'M1 Abrams',
+  url: 'https://en.wikipedia.org/wiki/M1_Abrams',
+  type: TankType.MBT,
+  year: 1980,
+  origin: TankOrigin.USA,
+  count: 10300,
+  mass: 54,
+  engine: 1500,
+  range: [426, 265],
+  speed: [72, 45],
+};
+
+const Challenger1: Tank = {
+  name: 'Challenger 1',
+  url: 'https://en.wikipedia.org/wiki/Challenger_1',
+  type: TankType.MBT,
+  year: 1983,
+  origin: TankOrigin.UK,
+  count: 420,
+  mass: 62,
+  engine: 1200,
+  range: [450, 280],
+  speed: [56, 35],
+};
+
+const K1: Tank = {
+  name: 'K1 (Type 88)',
+  url: 'https://en.wikipedia.org/wiki/K1_tank',
+  type: TankType.MBT,
+  year: 1985,
+  origin: TankOrigin.SouthAfrica,
+  count: 1027,
+  mass: 51,
+  engine: 1200,
+  range: [500, 310],
+  speed: [65, 40],
+};
+
+const MerkavaMark1: Tank = {
+  name: 'Merkava Mark I',
+  url: 'https://en.wikipedia.org/wiki/Merkava',
+  type: TankType.MBT,
+  year: 1979,
+  origin: TankOrigin.Israel,
+  count: 250,
+  mass: 61,
+  engine: 908,
+  range: [500, 310],
+  speed: [46, 29]
+};
+
+const MerkavaMark2: Tank = {
+  name: 'Merkava Mark II',
+  url: 'https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_2',
+  type: TankType.MBT,
+  year: 1983,
+  origin: TankOrigin.Israel,
+  count: 580,
+  mass: 62,
+  engine: 950,
+  range: [500, 310],
+  speed: [55, 34]
+};
+
+const MerkavaMark3: Tank = {
+  name: 'Merkava III',
+  url: 'https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_3',
+  type: TankType.MBT,
+  year: 1989,
+  origin: TankOrigin.Israel,
+  count: 780,
+  mass: 64,
+  engine: 1200,
+  range: [500, 310],
+  speed: [60, 37],
+};
+
+const MerkavaMark4: Tank = {
+  name: 'Merkava IV',
+  url: 'https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_4',
+  type: TankType.MBT,
+  year: 2003,
+  origin: TankOrigin.Israel,
+  count: 360,
+  mass: 65,
+  engine: 1500,
+  range: [500, 310],
+  speed: [64, 40],
+};
+
+const Type90: Tank = {
+  name: 'Type 90',
+  url: 'https://en.wikipedia.org/wiki/Type_90_tank',
+  type: TankType.MBT,
+  year: 1990,
+  origin: TankOrigin.Japan,
+  count: 341,
+  mass: 50,
+  engine: 1500,
+  range: [350, 215],
+  speed: [70, 43],
+};
+
+const Leclerc: Tank = {
+  name: 'Leclerc',
+  url: 'https://en.wikipedia.org/wiki/Leclerc_tank',
+  type: TankType.MBT,
+  year: 1990,
+  origin: TankOrigin.France,
+  count: 862,
+  mass: 55,
+  engine: 1500,
+  range: [550, 340],
+  speed: [71, 44],
+};
+
+const T90: Tank = {
+  name: 'T90',
+  url: 'https://en.wikipedia.org/wiki/T-90',
+  type: TankType.MBT,
+  year: 1990,
+  origin: TankOrigin.Russia,
+  count: 4000,
+  mass: 46,
+  engine: 1000,
+  range: [550, 340],
+  speed: [60, 37],
+};
+
+const PT91: Tank = {
+  name: 'PT-91 Twardy',
+  url: 'https://en.wikipedia.org/wiki/PT-91_Twardy',
+  type: TankType.MBT,
+  year: 1993,
+  origin: TankOrigin.Poland,
+  count: 281,
+  mass: 49,
+  engine: 1000,
+  range: [650, 400],
+  speed: [70, 43],
+};
+
+const Ariete: Tank = {
+  name: 'Ariete',
+  url: 'https://en.wikipedia.org/wiki/Ariete',
+  type: TankType.MBT,
+  year: 1994,
+  origin: TankOrigin.Italy,
+  count: 200,
+  mass: 54,
+  engine: 1270,
+  range: [600, 370],
+  speed: [65, 40],
+};
+
+const Challenger2: Tank = {
+  name: 'Challenger 2',
+  url: 'https://en.wikipedia.org/wiki/Challenger_2',
+  type: TankType.MBT,
+  year: 1986,
+  origin: TankOrigin.UK,
+  count: 447,
+  mass: 64,
+  engine: 1200,
+  range: [550, 340],
+  speed: [59, 37],
+};
+
+const ZulfiqarIII: Tank = {
+  name: 'Zulfiqar III',
+  url: 'https://en.wikipedia.org/wiki/Zulfiqar_(tank)#Zulfiqar-3',
+  type: TankType.MBT,
+  year: 1999,
+  origin: TankOrigin.Iran,
+  count: 750,
+  mass: 44,
+  engine: 1000,
+  range: [450, 280],
+  speed: [75, 47],
+};
+
 export const tanks: Tank[] = [
+  ZulfiqarIII,
+  Challenger2,
+  Ariete,
+  PT91,
+  T90,
+  Leclerc,
+  Type90,
+  MerkavaMark4,
+  MerkavaMark3,
+  MerkavaMark2,
+  MerkavaMark1,
+  K1,
+  Challenger1,
+  M1Abrams,
+  Leopard2,
+  T84,
+  T80,
+  RamsesII,
+  AlZarrar,
+  Type72Z,
   ZulfiqarI,
   CM12,
   CM11,
@@ -501,7 +762,6 @@ export const tanks: Tank[] = [
   OF40,
   Type96,
   Type80_88,
-  MerkavaMark1_2,
   VickersMark3,
   Type74,
   Olifant,
@@ -523,7 +783,6 @@ export const tanks: Tank[] = [
   T54,
   Centurion,
   T14Armata,
-  M1Abrams,
   BobSemple,
   TKS,
 ];
