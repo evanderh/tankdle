@@ -29,3 +29,44 @@ body {
   padding: 2rem;
   text-align: center;
 }
+
+.guess-tile {
+  height: 100%;
+  padding: 0.5em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.guess-tile-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-tile-correct {
+  background-color: #43a865 !important;
+}
+
+.guess-tile-close {
+  background-color: #b8b105 !important;
+}
+
+/* .fraction {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.fraction .top {
+  display: block;
+  font-size: 0.8em;
+}
+
+.fraction .bottom {
+  display: block;
+  font-size: 0.8em;
+  border-top: 1px solid;
+} */

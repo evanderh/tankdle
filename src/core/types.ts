@@ -31,20 +31,20 @@ export enum TankType {
   Light = 'Light Tank',
   Medium = 'Medium Tank',
   Heavy = 'Heavy Tank',
-  MBT = 'Main Battle Tank'
+  MBT = 'MBT',
 };
 
 export type Tank = {
-  name: string;
-  url: string;
-  type: TankType;
-  year: number; // year first built
-  origin: TankOrigin;
-  count: number; // number of tanks built
-  mass: number; // tons
-  engine: number; // horsepower
-  range: [number, number]; // [km, mi]
-  speed: [number, number]; // [km, mi]
+  name: string;             // tank name
+  url: string;              // link to wikipedia
+  type: TankType;           // type of tank
+  year: number;             // year first built
+  origin: TankOrigin;       // country of origin
+  count: number;            // number of tanks built
+  mass: number;             // tons
+  engine: number;           // horsepower
+  range: [number, number];  // [km, mi]
+  speed: [number, number];  // [km, mi]
 };
 
 export type TankImage = {

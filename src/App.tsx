@@ -11,6 +11,9 @@ const getTheme = (mode: 'dark' | 'light') =>
     palette: {
       mode,
     },
+    typography: {
+      fontFamily: 'Monaco, "Courier New", monospace',
+    }
   });
 
 const getInitialTheme = () => {

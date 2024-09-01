@@ -16,48 +16,16 @@ const GuessFeedback = ({ guess, answerTank }: Props) => {
 
   return (
     <div>
-      <h3>{guess}</h3>
+      <h3 style={{ paddingTop: '0.5em', paddingBottom: '1em' }}>{guess}</h3>
       <Grid2 container spacing={1}>
-        <GuessTile
-          field="type"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="year"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="origin"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="count"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="mass"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="engine"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="range"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
-        <GuessTile
-          field="speed"
-          guessTank={guessTank}
-          answerTank={answerTank}
-        />
+        <GuessTile field="type" guess={guessTank} correct={answerTank} />
+        <GuessTile field="year" guess={guessTank} correct={answerTank} />
+        <GuessTile field="origin" guess={guessTank} correct={answerTank} />
+        <GuessTile field="count" guess={guessTank} correct={answerTank} />
+        <GuessTile field="mass" guess={guessTank} correct={answerTank} />
+        <GuessTile field="engine" guess={guessTank} correct={answerTank} />
+        <GuessTile field="range" guess={guessTank} correct={answerTank} />
+        <GuessTile field="speed" guess={guessTank} correct={answerTank} />
       </Grid2>
     </div>
   );
