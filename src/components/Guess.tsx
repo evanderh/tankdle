@@ -1,6 +1,7 @@
 import { Grid2 } from "@mui/material";
-import { Tank, tanks } from "../core/tanks";
 import GuessTile from "./GuessTile";
+import { tanks } from "../core/tanks";
+import { Tank } from "../core/types";
 
 interface Props {
   guess: string;

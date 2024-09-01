@@ -1,5 +1,5 @@
 import { Divider, Stack } from "@mui/material";
-import { Tank } from "../core/tanks";
+import { Tank } from "../core/types";
 import { GameStatus } from "./Game";
 import GuessFeedback from "./Guess";
 

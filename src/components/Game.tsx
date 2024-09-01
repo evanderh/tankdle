@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ImageDisplay from './ImageDisplay';
 import GuessInput from './GuessInput';
 import Feedback from './Feedback';
-import { TankImage } from "../core/tanks";
+import { TankImage } from "../core/types";
 
 export type GameStatus = 'playing' | 'win' | 'loss';
 

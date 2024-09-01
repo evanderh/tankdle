@@ -1,5 +1,5 @@
 import { Grid2, Paper } from "@mui/material";
-import { Tank } from "../core/tanks";
+import { Tank } from "../core/types";
 
 function renderField(tank: Tank, field: keyof(Tank)) {
   switch (field) {
