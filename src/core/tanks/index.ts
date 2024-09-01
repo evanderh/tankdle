@@ -77,7 +77,7 @@ export const getTankImage = (index: string | null): TankImage => {
   return tankImages[daysSince % tankImages.length];
 };
 
-export const TankOriginToCountryCode: {
+export const countryCode: {
   [key in TankOrigin]: string;
 } = {
   [TankOrigin.USA]: 'us',
