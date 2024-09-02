@@ -48,6 +48,11 @@ const TankInput = ({
                 {...params}
                 label="Guess the tank"
                 variant="outlined"
+                sx={{
+                  '& .MuiInputBase-input': { fontWeight: 'bold' },
+                  '& .MuiFormLabel-root': { fontWeight: 'bold' },
+                  '& .MuiOutlinedInput-notchedOutline': { borderWidth: 2 },
+                }}
               />
             )}
           />
