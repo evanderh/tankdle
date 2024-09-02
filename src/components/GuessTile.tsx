@@ -1,4 +1,4 @@
-import { Grid2, Paper } from "@mui/material";
+import { Grid2, Paper, Stack, Typography } from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Tank } from "../core/types";
@@ -27,24 +27,25 @@ function renderHeader(field: keyof(Tank)) {
 }
 
 function renderField(guess: Tank, field: keyof(Tank)) {
-  // const kmPerHour = ((<span className="fraction"><span className="top">km</span><span className="bottom">h</span></span>))
-  // const miPerHour = ((<span className="fraction"><span className="top">mi</span><span className="bottom">h</span></span>))
+  const sx = { fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' }};
+
   switch (field) {
     case 'origin':
       return <img
-        src={`https://flagcdn.com/h40/${countryCode[guess[field]]}.png`}
-        height="40"
+        src={`flags/${countryCode[guess[field]]}.png`}
+        height="48"
         alt={guess[field]}
+        style={{ border: '1px solid grey' }}
       />;
 
     case 'range':
-      return `${guess[field][1]} mi`;
+      return <Typography sx={sx}>{guess[field][1]} mi</Typography>;
 
     case 'speed':
-      return `${guess[field][1]} mi/h`;
+      return <Typography sx={sx}>{guess[field][1]} mi/h</Typography>;
 
     default:
-      return guess[field];
+      return <Typography sx={sx}>{guess[field]}</Typography>;
   }
 }
 
@@ -57,18 +58,18 @@ function renderIndicator(guess: Tank, correct: Tank, field: keyof(Tank)) {
     case 'mass':
     case 'engine':
       if (guess[field] > correct[field]) {
-        return <KeyboardArrowUpIcon sx={sx} />
-      } else if (guess[field] < correct[field]) {
         return <KeyboardArrowDownIcon sx={sx} />
+      } else if (guess[field] < correct[field]) {
+        return <KeyboardArrowUpIcon sx={sx} />
       }
       break;
 
     case 'range':
     case 'speed':
       if (guess[field][1] > correct[field][1]) {
-        return <KeyboardArrowUpIcon sx={sx} />
-      } else if (guess[field][1] < correct[field][1]) {
         return <KeyboardArrowDownIcon sx={sx} />
+      } else if (guess[field][1] < correct[field][1]) {
+        return <KeyboardArrowUpIcon sx={sx} />
       }
       break;
 
@@ -123,16 +124,21 @@ const GuessTile = ({ field, guess, correct }: Props) => {
   }
 
   return (
-    <Grid2 size={3}>
+    <Grid2 size={{ xs: 6, md: 3 }}>
       <Paper
-        elevation={8}
+        sx={{ height: { xs: '64px', sm: '64px', md: '80px' } }}
+        elevation={12}
         className={classNames.join(' ')}
       >
-        <h3>{renderHeader(field)}</h3>
-        <h2>
-          {renderField(guess, field)}
-          {renderIndicator(guess, correct, field)}
-        </h2>
+        <Stack sx={{}}>
+          <Typography>
+            {renderHeader(field)}
+          </Typography>
+          <Stack direction="row" sx={{ justifyContent: 'center', alignItems: 'center' }}>
+            {renderField(guess, field)}
+            {renderIndicator(guess, correct, field)}
+          </Stack>
+        </Stack>
       </Paper>
     </Grid2>
   );

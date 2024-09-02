@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline, Container } from '@mui/material';
+import { ThemeProvider, CssBaseline, Container, useMediaQuery } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 import Home from './pages/Home';
@@ -13,7 +13,7 @@ const getTheme = (mode: 'dark' | 'light') =>
     },
     typography: {
       fontFamily: 'Monaco, "Courier New", monospace',
-    }
+    },
   });
 
 const getInitialTheme = () => {
@@ -36,10 +36,13 @@ const App = () => {
     return () => mediaQuery.removeEventListener('change', handleChange);
   });
 
+  const theme = getTheme(mode);
+  const isMedium = useMediaQuery(theme.breakpoints.up('md'));
+
   return (
-    <ThemeProvider theme={getTheme(mode)}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="md">
+      <Container maxWidth={isMedium ? "md" : 'sm'}>
         <h1>Tankdle</h1>
         <Routes>
           <Route path="/" element={<Home />} />

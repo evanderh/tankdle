@@ -8,7 +8,7 @@ interface Props {
   answerTank: Tank;
 };
 
-const GuessFeedback = ({ guess, answerTank }: Props) => {
+const GuessGrid = ({ guess, answerTank }: Props) => {
   const guessTank = tanks.find(t => t.name === guess);
   if (!guessTank) {
     return;
@@ -16,7 +16,11 @@ const GuessFeedback = ({ guess, answerTank }: Props) => {
 
   return (
     <div>
-      <h3 style={{ paddingTop: '0.5em', paddingBottom: '1em' }}>{guess}</h3>
+      <h3 style={{ padding: '0.5em' }}>
+        <a href={guessTank.url} target="_blank">
+          {guess}
+        </a>
+      </h3>
       <Grid2 container spacing={1}>
         <GuessTile field="type" guess={guessTank} correct={answerTank} />
         <GuessTile field="year" guess={guessTank} correct={answerTank} />
@@ -31,4 +35,4 @@ const GuessFeedback = ({ guess, answerTank }: Props) => {
   );
 };
 
-export default GuessFeedback;
+export default GuessGrid;

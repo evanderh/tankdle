@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as MuiLink } from '@mui/material';
+
 import ImageDisplay from './ImageDisplay';
 import GuessInput from './GuessInput';
 import Feedback from './Feedback';
 import { TankImage } from "../core/types";
 
 export type GameStatus = 'playing' | 'win' | 'loss';
+export const maxGuesses = 6;
 
 interface Props {
   tankImage: TankImage,
@@ -30,18 +34,27 @@ const Game = ({ tankImage }: Props) => {
         attribution={tankImage.attribution}
         status={status}
       />
-      <br />
+      {status === 'win' &&
+        <p>Correct!</p>
+      }
+      {status === 'loss' &&
+        <p>Better luck next time!</p>
+      }
+      {status !== 'playing' &&
+        <>
+          <p>The answer was: {tankImage.tank.name}</p>
+          <MuiLink to="/tanks" component={RouterLink}>Play any tank</MuiLink>
+        </>
+      }
 
       <GuessInput
         onGuessSubmit={handleGuessSubmit}
-        guessesRemaining={6-guesses.length}
+        numGuesses={guesses.length}
         status={status}
       />
-      <br />
 
       <Feedback
         guesses={guesses}
-        status={status}
         tank={tankImage.tank}
       />
     </>

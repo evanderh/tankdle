@@ -31,9 +31,6 @@ body {
 }
 
 .guess-tile {
-  height: 100%;
-  padding: 1em;
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,33 +38,14 @@ body {
   text-align: center;
 }
 
-.guess-tile h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.guess-tile p {
+  font-weight: bold;
 }
 
 .guess-tile-correct {
-  background-color: #43a865 !important;
+  background-color: #385 !important;
 }
 
 .guess-tile-close {
-  background-color: #b8b105 !important;
+  background-color: #ba2 !important;
 }
-
-/* .fraction {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.fraction .top {
-  display: block;
-  font-size: 0.8em;
-}
-
-.fraction .bottom {
-  display: block;
-  font-size: 0.8em;
-  border-top: 1px solid;
-} */
