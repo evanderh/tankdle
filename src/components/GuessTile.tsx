@@ -27,7 +27,10 @@ function renderHeader(field: keyof(Tank)) {
 }
 
 function renderField(guess: Tank, field: keyof(Tank)) {
-  const sx = { fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' } };
+  const sx = {
+    fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
+    fontWeight: 'bold',
+  };
   const lh = { lineHeight: { xs: '1.5rem', md: '2rem' } };
 
   switch (field) {
@@ -120,22 +123,29 @@ interface Props {
 };
 
 const GuessTile = ({ field, guess, correct }: Props) => {
-  const classNames = ['guess-tile'];
+  let backgroundColor = 'default';
   if (guess[field] === correct[field]) {
-    classNames.push('guess-tile-correct');
+    backgroundColor = '#385';
   } else if (isCloseGuess(guess, correct, field)) {
-    classNames.push('guess-tile-close');
+    backgroundColor = '#ba2';
   }
 
   return (
     <Grid2 size={{ xs: 6, md: 3 }}>
       <Paper
-        sx={{ height: { xs: '64px', sm: '64px', md: '80px' } }}
+        sx={{
+          height: { xs: '64px', sm: '64px', md: '80px' },
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          backgroundColor: backgroundColor,
+        }}
         elevation={12}
-        className={classNames.join(' ')}
       >
-        <Stack sx={{}}>
-          <Typography>
+        <Stack>
+          <Typography sx={{ fontWeight: 'bold' }}>
             {renderHeader(field)}
           </Typography>
           <Stack direction="row" sx={{ justifyContent: 'center', alignItems: 'center' }}>

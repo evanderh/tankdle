@@ -7,9 +7,7 @@ const Home: React.FC = () => {
   const [searchParams, ] = useSearchParams();
   const tankImage = getTankImage(searchParams.get('tank'));
 
-  return (
-    <Game tankImage={tankImage} />
-  );
+  return <Game tankImage={tankImage} />;
 };
 
 export default Home;

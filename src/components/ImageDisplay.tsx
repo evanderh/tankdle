@@ -10,7 +10,7 @@ const ImageDisplay = ({ imageUrl, attribution, status }: Props) => {
   return (
     <div className="image-display">
       <img
-        width={240}
+        width={360}
         src={imageUrl}
         alt="Tank of the day"
       />
