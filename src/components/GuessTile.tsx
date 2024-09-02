@@ -27,9 +27,13 @@ function renderHeader(field: keyof(Tank)) {
 }
 
 function renderField(guess: Tank, field: keyof(Tank)) {
-  const sx = { fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' }};
+  const sx = { fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' } };
+  const lh = { lineHeight: { xs: '1.5rem', md: '2rem' } };
 
   switch (field) {
+    case 'type':
+      return <Typography sx={{ ...sx, ...lh }}>{guess[field]}</Typography>;
+
     case 'origin':
       return <img
         src={`flags/${countryCode[guess[field]]}.png`}

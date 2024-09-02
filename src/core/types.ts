@@ -31,7 +31,11 @@ export enum TankType {
   Light = 'Light Tank',
   Medium = 'Medium Tank',
   Heavy = 'Heavy Tank',
+  SuperHeavy = 'Super Heavy',
   MBT = 'MBT',
+  TankDestroyer = 'Tank Destroyer',
+  SPG = 'SPG',
+  AssaultGun = 'Assault Gun',
 };
 
 export type Tank = {
