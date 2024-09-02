@@ -87,6 +87,7 @@ export const countryCode: {
   [TankOrigin.UK]: 'gb',
   [TankOrigin.Soviet]: 'su',
   [TankOrigin.Japan]: 'jp',
+  [TankOrigin.NaziGermany]: 'ng',
   [TankOrigin.WestGermany]: 'de',
   [TankOrigin.Switzerland]: 'ch',
   [TankOrigin.France]: 'fr',

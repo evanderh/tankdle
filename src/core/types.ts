@@ -6,6 +6,7 @@ export enum TankOrigin {
   UK = 'United Kingdom',
   Soviet = 'Soviet Union',
   Japan = 'Japan',
+  NaziGermany = 'Germany',
   WestGermany = 'West Germany',
   Switzerland = 'Switzerland',
   France = 'France',
