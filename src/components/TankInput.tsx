@@ -12,7 +12,7 @@ interface Props {
   status: GameStatus;
 }
 
-const GuessInput = ({
+const TankInput = ({
   onGuessSubmit,
   numGuesses,
   status,
@@ -58,7 +58,7 @@ const GuessInput = ({
             disabled={status !== 'playing'}
             variant="contained"
             color="primary"
-            style={{ height: '100%' }}
+            sx={{ height: '100%', fontWeight: 'bold' }}
           >
             Submit
           </Button>
@@ -68,4 +68,4 @@ const GuessInput = ({
   );
 };
 
-export default GuessInput;
+export default TankInput;

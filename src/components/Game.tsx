@@ -3,8 +3,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link as MuiLink } from '@mui/material';
 
 import ImageDisplay from './ImageDisplay';
-import GuessInput from './GuessInput';
-import Feedback from './Feedback';
+import TankInput from './TankInput';
+import GuessesList from './GuessesList';
 import { TankImage } from "../core/types";
 
 export type GameStatus = 'playing' | 'win' | 'loss';
@@ -47,13 +47,13 @@ const Game = ({ tankImage }: Props) => {
         </>
       }
 
-      <GuessInput
+      <TankInput
         onGuessSubmit={handleGuessSubmit}
         numGuesses={guesses.length}
         status={status}
       />
 
-      <Feedback
+      <GuessesList
         guesses={guesses}
         tank={tankImage.tank}
       />

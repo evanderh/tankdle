@@ -7,7 +7,7 @@ interface Props {
   tank: Tank;
 }
 
-const Feedback = ({ guesses, tank }: Props) => {
+const GuessesList = ({ guesses, tank }: Props) => {
   return (
     <Stack
       divider={<Divider flexItem />}
@@ -24,4 +24,4 @@ const Feedback = ({ guesses, tank }: Props) => {
   );
 };
 
-export default Feedback;
+export default GuessesList;
