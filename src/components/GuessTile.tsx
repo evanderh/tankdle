@@ -1,4 +1,4 @@
-import { Grid2, Paper, Stack, Typography } from "@mui/material";
+import { Grid2, Paper, Stack, Typography, useMediaQuery } from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Tank } from "../core/types";
@@ -26,7 +26,7 @@ function renderHeader(field: keyof(Tank)) {
   }
 }
 
-function renderField(guess: Tank, field: keyof(Tank)) {
+function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
   const sx = {
     fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
     fontWeight: 'bold',
@@ -42,7 +42,7 @@ function renderField(guess: Tank, field: keyof(Tank)) {
         src={`flags/${countryCode[guess[field]]}.png`}
         height="48"
         alt={guess[field]}
-        style={{ border: '1px solid grey' }}
+        style={{ border: `1px solid ${isDarkMode ? 'white' : 'black'}` }}
       />;
 
     case 'range':
@@ -123,6 +123,8 @@ interface Props {
 };
 
 const GuessTile = ({ field, guess, correct }: Props) => {
+  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
   let backgroundColor = 'default';
   if (guess[field] === correct[field]) {
     backgroundColor = '#385';
@@ -149,7 +151,7 @@ const GuessTile = ({ field, guess, correct }: Props) => {
             {renderHeader(field)}
           </Typography>
           <Stack direction="row" sx={{ justifyContent: 'center', alignItems: 'center' }}>
-            {renderField(guess, field)}
+            {renderField(guess, field, isDarkMode)}
             {renderIndicator(guess, correct, field)}
           </Stack>
         </Stack>
