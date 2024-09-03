@@ -37,6 +37,7 @@ export enum TankType {
   TankDestroyer = 'Tank Destroyer',
   SPG = 'SPG',
   AssaultGun = 'Assault Gun',
+  ArmoredCar = 'Armored Car',
 };
 
 export type Tank = {
