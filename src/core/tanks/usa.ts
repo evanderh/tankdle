@@ -29,8 +29,8 @@ export const T28: Tank = {
   count: 2,
   mass: 86,
   engine: 500,
-  range: [160, 100],
-  speed: [13, 8],
+  range: { km: 160, mi: 100 },
+  speed: { km: 13, mi: 8 },
 };
 
 export const M4: Tank = {
@@ -42,8 +42,8 @@ export const M4: Tank = {
   count: 49234,
   mass: 33,
   engine: 400,
-  range: [240, 150],
-  speed: [48, 30],
+  range: { km: 240, mi: 150 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const M3: Tank = {
@@ -55,8 +55,8 @@ export const M3: Tank = {
   count: 22744,
   mass: 17,
   engine: 220,
-  range: [160, 100],
-  speed: [58, 36],
+  range: { km: 160, mi: 100 },
+  speed: { km: 58, mi: 36 },
 };
 
 export const M26: Tank = {
@@ -68,8 +68,8 @@ export const M26: Tank = {
   count: 2202,
   mass: 42,
   engine: 450,
-  range: [160, 100],
-  speed: [48, 30],
+  range: { km: 160, mi: 100 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const M10: Tank = {
@@ -81,8 +81,8 @@ export const M10: Tank = {
   count: 6406,
   mass: 29,
   engine: 450,
-  range: [260, 160],
-  speed: [48, 30],
+  range: { km: 260, mi: 160 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const M18: Tank = {
@@ -94,8 +94,8 @@ export const M18: Tank = {
   count: 2507,
   mass: 17,
   engine: 350,
-  range: [160, 100],
-  speed: [89, 55],
+  range: { km: 160, mi: 100 },
+  speed: { km: 89, mi: 55 },
 };
 
 export const M48: Tank = {
@@ -107,8 +107,8 @@ export const M48: Tank = {
   count: 12000,
   mass: 45,
   engine: 750,
-  range: [463, 288],
-  speed: [48, 30],
+  range: { km: 463, mi: 288 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const M60: Tank = {
@@ -120,8 +120,8 @@ export const M60: Tank = {
   count: 15000,
   mass: 46,
   engine: 750,
-  range: [500, 300],
-  speed: [48, 30],
+  range: { km: 500, mi: 300 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const M103: Tank = {
@@ -133,8 +133,8 @@ export const M103: Tank = {
   count: 300,
   mass: 59,
   engine: 810,
-  range: [130, 80],
-  speed: [34, 21],
+  range: { km: 130, mi: 80 },
+  speed: { km: 34, mi: 21 },
 };
 
 export const M551: Tank = {
@@ -146,8 +146,8 @@ export const M551: Tank = {
   count: 1662,
   mass: 17,
   engine: 300,
-  range: [560, 350],
-  speed: [69, 43],
+  range: { km: 560, mi: 350 },
+  speed: { km: 69, mi: 43 },
 };
 
 export const M41: Tank = {
@@ -159,8 +159,8 @@ export const M41: Tank = {
   count: 5467,
   mass: 26,
   engine: 500,
-  range: [160, 100],
-  speed: [72, 45],
+  range: { km: 160, mi: 100 },
+  speed: { km: 72, mi: 45 },
 };
 
 export const M1: Tank = {
@@ -172,6 +172,6 @@ export const M1: Tank = {
   count: 10300,
   mass: 54,
   engine: 1500,
-  range: [426, 265],
-  speed: [72, 45],
+  range: { km: 426, mi: 265 },
+  speed: { km: 72, mi: 45 },
 };

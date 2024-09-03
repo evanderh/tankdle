@@ -30,8 +30,8 @@ export const PanzerIII: Tank = {
   count: 5774,
   mass: 23,
   engine: 295,
-  range: [165, 103],
-  speed: [40, 25],
+  range: { km: 165, mi: 103 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const PanzerIV: Tank = {
@@ -43,8 +43,8 @@ export const PanzerIV: Tank = {
   count: 8553,
   mass: 25,
   engine: 296,
-  range: [320, 199],
-  speed: [42, 26],
+  range: { km: 320, mi: 199 },
+  speed: { km: 42, mi: 26 },
 };
 
 export const TigerI: Tank = {
@@ -56,8 +56,8 @@ export const TigerI: Tank = {
   count: 1347,
   mass: 54,
   engine: 690,
-  range: [195, 121],
-  speed: [45, 28],
+  range: { km: 195, mi: 121 },
+  speed: { km: 45, mi: 28 },
 };
 
 export const TigerII: Tank = {
@@ -69,8 +69,8 @@ export const TigerII: Tank = {
   count: 492,
   mass: 69,
   engine: 690,
-  range: [190, 120],
-  speed: [42, 26],
+  range: { km: 190, mi: 120 },
+  speed: { km: 42, mi: 26 },
 };
 
 export const Panther: Tank = {
@@ -82,8 +82,8 @@ export const Panther: Tank = {
   count: 6000,
   mass: 45,
   engine: 690,
-  range: [260, 150],
-  speed: [55, 34],
+  range: { km: 260, mi: 150 },
+  speed: { km: 55, mi: 34 },
 };
 
 export const StuGIII: Tank = {
@@ -95,8 +95,8 @@ export const StuGIII: Tank = {
   count: 11386,
   mass: 24,
   engine: 296,
-  range: [155, 96],
-  speed: [40, 25],
+  range: { km: 155, mi: 96 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const Jagdpanther: Tank = {
@@ -108,8 +108,8 @@ export const Jagdpanther: Tank = {
   count: 413,
   mass: 45,
   engine: 690,
-  range: [260, 160],
-  speed: [46, 29],
+  range: { km: 260, mi: 160 },
+  speed: { km: 46, mi: 29 },
 };
 
 export const Elefant: Tank = {
@@ -121,8 +121,8 @@ export const Elefant: Tank = {
   count: 91,
   mass: 65,
   engine: 592,
-  range: [150, 93],
-  speed: [30, 19],
+  range: { km: 150, mi: 93 },
+  speed: { km: 30, mi: 19 },
 };
 
 export const Maus: Tank = {
@@ -134,8 +134,8 @@ export const Maus: Tank = {
   count: 2,
   mass: 188,
   engine: 1200,
-  range: [160, 99],
-  speed: [20, 12],
+  range: { km: 160, mi: 99 },
+  speed: { km: 20, mi: 12 },
 };
 
 export const Leopard1: Tank = {
@@ -147,8 +147,8 @@ export const Leopard1: Tank = {
   count: 4744,
   mass: 40,
   engine: 819,
-  range: [600, 372],
-  speed: [65, 40],
+  range: { km: 600, mi: 372 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const Leopard2: Tank = {
@@ -160,6 +160,6 @@ export const Leopard2: Tank = {
   count: 3600,
   mass: 62,
   engine: 1500,
-  range: [340, 210],
-  speed: [70, 43],
+  range: { km: 340, mi: 210 },
+  speed: { km: 70, mi: 43 },
 };

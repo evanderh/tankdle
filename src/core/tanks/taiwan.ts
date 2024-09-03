@@ -11,8 +11,8 @@ export const CM11: Tank = {
   count: 450,
   mass: 50,
   engine: 750,
-  range: [480, 300],
-  speed: [48, 30],
+  range: { km: 480, mi: 300 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const CM12: Tank = {
@@ -24,6 +24,6 @@ export const CM12: Tank = {
   count: 100,
   mass: 49,
   engine: 750,
-  range: [203, 100],
-  speed: [48, 30],
+  range: { km: 203, mi: 100 },
+  speed: { km: 48, mi: 30 },
 };

@@ -9,8 +9,8 @@ export const K1: Tank = {
   count: 1027,
   mass: 51,
   engine: 1200,
-  range: [500, 310],
-  speed: [65, 40],
+  range: { km: 500, mi: 310 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const Olifant: Tank = {
@@ -22,7 +22,7 @@ export const Olifant: Tank = {
   count: 224,
   mass: 58,
   engine: 650,
-  range: [100, 62],
-  speed: [34, 21],
+  range: { km: 100, mi: 62 },
+  speed: { km: 34, mi: 21 },
 };
 

@@ -20,7 +20,7 @@ const GuessGrid = ({ guess, answerTank }: Props) => {
         <a href={guessTank.url} target="_blank">{guess}</a>
       </h3>
       <Grid2 container spacing={1}>
-        <GuessTile field="type" guess={guessTank} correct={answerTank} />
+        <GuessTile field="role" guess={guessTank} correct={answerTank} />
         <GuessTile field="year" guess={guessTank} correct={answerTank} />
         <GuessTile field="origin" guess={guessTank} correct={answerTank} />
         <GuessTile field="count" guess={guessTank} correct={answerTank} />

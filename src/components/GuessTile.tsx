@@ -34,7 +34,7 @@ function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
   const lh = { lineHeight: { xs: '1.5rem', md: '2rem' } };
 
   switch (field) {
-    case 'type':
+    case 'role':
       return <Typography sx={{ ...sx, ...lh }}>{guess[field]}</Typography>;
 
     case 'origin':
@@ -46,10 +46,10 @@ function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
       />;
 
     case 'range':
-      return <Typography sx={sx}>{guess[field][1]} mi</Typography>;
+      return <Typography sx={sx}>{guess[field].mi} mi</Typography>;
 
     case 'speed':
-      return <Typography sx={sx}>{guess[field][1]} mi/h</Typography>;
+      return <Typography sx={sx}>{guess[field].mi} mi/h</Typography>;
 
     default:
       return <Typography sx={sx}>{guess[field]}</Typography>;
@@ -73,9 +73,9 @@ function renderIndicator(guess: Tank, correct: Tank, field: keyof(Tank)) {
 
     case 'range':
     case 'speed':
-      if (guess[field][1] > correct[field][1]) {
+      if (guess[field].mi > correct[field].mi) {
         return <KeyboardArrowDownIcon sx={sx} />
-      } else if (guess[field][1] < correct[field][1]) {
+      } else if (guess[field].mi < correct[field].mi) {
         return <KeyboardArrowUpIcon sx={sx} />
       }
       break;
@@ -105,11 +105,11 @@ function isCloseGuess(guess: Tank, correct: Tank, field: keyof(Tank)) {
 
     case 'range':
       // within 20%
-      return Math.abs(guess[field][1] - correct[field][1]) <= (correct[field][1] * 0.2);
+      return Math.abs(guess[field].mi - correct[field].mi) <= (correct[field].mi * 0.2);
 
     case 'speed':
       // within 20%
-      return Math.abs(guess[field][1] - correct[field][1]) <= (correct[field][1] * 0.2);
+      return Math.abs(guess[field].mi - correct[field].mi) <= (correct[field].mi * 0.2);
   
     default:
       return false;

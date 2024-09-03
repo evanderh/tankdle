@@ -19,8 +19,8 @@ export const MerkavaMark1: Tank = {
   count: 250,
   mass: 61,
   engine: 908,
-  range: [500, 310],
-  speed: [46, 29]
+  range: { km: 500, mi: 310 },
+  speed: { km: 46, mi: 29 }
 };
 
 export const MerkavaMark2: Tank = {
@@ -32,8 +32,8 @@ export const MerkavaMark2: Tank = {
   count: 580,
   mass: 62,
   engine: 950,
-  range: [500, 310],
-  speed: [55, 34]
+  range: { km: 500, mi: 310 },
+  speed: { km: 55, mi: 34 }
 };
 
 export const MerkavaMark3: Tank = {
@@ -45,8 +45,8 @@ export const MerkavaMark3: Tank = {
   count: 780,
   mass: 64,
   engine: 1200,
-  range: [500, 310],
-  speed: [60, 37],
+  range: { km: 500, mi: 310 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const MerkavaMark4: Tank = {
@@ -58,6 +58,6 @@ export const MerkavaMark4: Tank = {
   count: 360,
   mass: 65,
   engine: 1500,
-  range: [500, 310],
-  speed: [64, 40],
+  range: { km: 500, mi: 310 },
+  speed: { km: 64, mi: 40 },
 };

@@ -11,8 +11,8 @@ export const Panzer61: Tank = {
   count: 150,
   mass: 39,
   engine: 630,
-  range: [250, 160],
-  speed: [55, 34],
+  range: { km: 250, mi: 160 },
+  speed: { km: 55, mi: 34 },
 };
 
 export const Panzer68: Tank = {
@@ -24,6 +24,6 @@ export const Panzer68: Tank = {
   count: 390,
   mass: 41,
   engine: 660,
-  range: [200, 120],
-  speed: [55, 34],
+  range: { km: 200, mi: 120 },
+  speed: { km: 55, mi: 34 },
 };

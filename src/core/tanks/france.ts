@@ -25,8 +25,8 @@ export const CharB1: Tank = {
   count: 403,
   mass: 28,
   engine: 272,
-  range: [200, 120],
-  speed: [28, 17],
+  range: { km: 200, mi: 120 },
+  speed: { km: 28, mi: 17 },
 };
 
 export const RenaultR35: Tank = {
@@ -38,8 +38,8 @@ export const RenaultR35: Tank = {
   count: 1540,
   mass: 11,
   engine: 82,
-  range: [130, 80],
-  speed: [20, 12],
+  range: { km: 130, mi: 80 },
+  speed: { km: 20, mi: 12 },
 };
 
 export const SOMUA: Tank = {
@@ -51,8 +51,8 @@ export const SOMUA: Tank = {
   count: 440,
   mass: 20,
   engine: 190,
-  range: [230, 140],
-  speed: [40, 25],
+  range: { km: 230, mi: 140 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const EBR: Tank = {
@@ -64,8 +64,8 @@ export const EBR: Tank = {
   count: 1179,
   mass: 13,
   engine: 200,
-  range: [700, 430],
-  speed: [115, 71],
+  range: { km: 700, mi: 430 },
+  speed: { km: 115, mi: 71 },
 };
 
 export const AMX13: Tank = {
@@ -77,8 +77,8 @@ export const AMX13: Tank = {
   count: 7700,
   mass: 15,
   engine: 250,
-  range: [400, 250],
-  speed: [60, 37],
+  range: { km: 400, mi: 250 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const AMX30: Tank = {
@@ -90,8 +90,8 @@ export const AMX30: Tank = {
   count: 3571,
   mass: 36,
   engine: 720,
-  range: [600, 370],
-  speed: [65, 40],
+  range: { km: 600, mi: 370 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const AMX10: Tank = {
@@ -103,8 +103,8 @@ export const AMX10: Tank = {
   count: 464,
   mass: 16,
   engine: 250,
-  range: [800, 500],
-  speed: [85, 53],
+  range: { km: 800, mi: 500 },
+  speed: { km: 85, mi: 53 },
 };
 
 export const Leclerc: Tank = {
@@ -116,6 +116,6 @@ export const Leclerc: Tank = {
   count: 862,
   mass: 55,
   engine: 1500,
-  range: [550, 340],
-  speed: [71, 44],
+  range: { km: 550, mi: 340 },
+  speed: { km: 71, mi: 44 },
 };

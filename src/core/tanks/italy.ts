@@ -17,8 +17,8 @@ export const OF40: Tank = {
   count: 39,
   mass: 46,
   engine: 820,
-  range: [600, 370],
-  speed: [60, 37],
+  range: { km: 600, mi: 370 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const Ariete: Tank = {
@@ -30,6 +30,6 @@ export const Ariete: Tank = {
   count: 200,
   mass: 54,
   engine: 1270,
-  range: [600, 370],
-  speed: [65, 40],
+  range: { km: 600, mi: 370 },
+  speed: { km: 65, mi: 40 },
 };

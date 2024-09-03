@@ -34,8 +34,8 @@ export const T34: Tank = {
   count: 84070,
   mass: 27,
   engine: 500,
-  range: [330, 210],
-  speed: [53, 33],
+  range: { km: 330, mi: 210 },
+  speed: { km: 53, mi: 33 },
 };
 
 export const KV1: Tank = {
@@ -47,8 +47,8 @@ export const KV1: Tank = {
   count: 5219,
   mass: 45,
   engine: 600,
-  range: [250, 160],
-  speed: [35, 22],
+  range: { km: 250, mi: 160 },
+  speed: { km: 35, mi: 22 },
 };
 
 export const IS2: Tank = {
@@ -60,8 +60,8 @@ export const IS2: Tank = {
   count: 3854,
   mass: 46,
   engine: 520,
-  range: [240, 150],
-  speed: [37, 23],
+  range: { km: 240, mi: 150 },
+  speed: { km: 37, mi: 23 },
 };
 
 export const SU76: Tank = {
@@ -73,8 +73,8 @@ export const SU76: Tank = {
   count: 14292,
   mass: 12,
   engine: 140,
-  range: [250, 160],
-  speed: [45, 28],
+  range: { km: 250, mi: 160 },
+  speed: { km: 45, mi: 28 },
 };
 
 export const SU85: Tank = {
@@ -86,8 +86,8 @@ export const SU85: Tank = {
   count: 2650,
   mass: 30,
   engine: 493,
-  range: [280, 170],
-  speed: [55, 34],
+  range: { km: 280, mi: 170 },
+  speed: { km: 55, mi: 34 },
 };
 
 export const SU100: Tank = {
@@ -99,8 +99,8 @@ export const SU100: Tank = {
   count: 4976,
   mass: 32,
   engine: 500,
-  range: [250, 160],
-  speed: [48, 30],
+  range: { km: 250, mi: 160 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const ISU122: Tank = {
@@ -112,8 +112,8 @@ export const ISU122: Tank = {
   count: 2410,
   mass: 46,
   engine: 520,
-  range: [220, 140],
-  speed: [37, 23],
+  range: { km: 220, mi: 140 },
+  speed: { km: 37, mi: 23 },
 };
 
 export const ISU152: Tank = {
@@ -125,8 +125,8 @@ export const ISU152: Tank = {
   count: 4635,
   mass: 47,
   engine: 520,
-  range: [200, 125],
-  speed: [40, 25],
+  range: { km: 200, mi: 125 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const PT76: Tank = {
@@ -138,8 +138,8 @@ export const PT76: Tank = {
   count: 12000,
   mass: 15,
   engine: 240,
-  range: [400, 250],
-  speed: [44, 27],
+  range: { km: 400, mi: 250 },
+  speed: { km: 44, mi: 27 },
 };
 
 export const T54: Tank = {
@@ -151,8 +151,8 @@ export const T54: Tank = {
   count: 35000,
   mass: 36,
   engine: 520,
-  range: [400, 249],
-  speed: [48, 30],
+  range: { km: 400, mi: 249 },
+  speed: { km: 48, mi: 30 },
 };
 
 export const T55: Tank = {
@@ -164,8 +164,8 @@ export const T55: Tank = {
   count: 27500,
   mass: 36,
   engine: 581,
-  range: [530, 330],
-  speed: [51, 32],
+  range: { km: 530, mi: 330 },
+  speed: { km: 51, mi: 32 },
 };
 
 export const T62: Tank = {
@@ -177,8 +177,8 @@ export const T62: Tank = {
   count: 22700,
   mass: 37,
   engine: 580,
-  range: [450, 280],
-  speed: [50, 31],
+  range: { km: 450, mi: 280 },
+  speed: { km: 50, mi: 31 },
 };
 
 export const T64: Tank = {
@@ -190,8 +190,8 @@ export const T64: Tank = {
   count: 13000,
   mass: 38,
   engine: 700,
-  range: [500, 310],
-  speed: [60, 37],
+  range: { km: 500, mi: 310 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const T72: Tank = {
@@ -203,8 +203,8 @@ export const T72: Tank = {
   count: 25000,
   mass: 46,
   engine: 780,
-  range: [460, 290],
-  speed: [60, 37],
+  range: { km: 460, mi: 290 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const T80: Tank = {
@@ -216,8 +216,8 @@ export const T80: Tank = {
   count: 5500,
   mass: 43,
   engine: 1000,
-  range: [335, 208],
-  speed: [80, 50],
+  range: { km: 335, mi: 208 },
+  speed: { km: 80, mi: 50 },
 };
 
 export const T90: Tank = {
@@ -229,8 +229,8 @@ export const T90: Tank = {
   count: 4000,
   mass: 46,
   engine: 1000,
-  range: [550, 340],
-  speed: [60, 37],
+  range: { km: 550, mi: 340 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const T14: Tank = {
@@ -242,7 +242,7 @@ export const T14: Tank = {
   count: 50,
   mass: 55,
   engine: 1500,
-  range: [500, 310],
-  speed: [80, 50],
+  range: { km: 500, mi: 310 },
+  speed: { km: 80, mi: 50 },
 };
 

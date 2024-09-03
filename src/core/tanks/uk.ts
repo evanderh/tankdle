@@ -28,8 +28,8 @@ export const MatildaII: Tank = {
   count: 2987,
   mass: 25,
   engine: 190,
-  range: [80, 50],
-  speed: [24, 15],
+  range: { km: 80, mi: 50 },
+  speed: { km: 24, mi: 15 },
 };
 
 export const Churchill: Tank = {
@@ -41,8 +41,8 @@ export const Churchill: Tank = {
   count: 5640,
   mass: 40,
   engine: 350,
-  range: [210, 130],
-  speed: [24, 15],
+  range: { km: 210, mi: 130 },
+  speed: { km: 24, mi: 15 },
 };
 
 export const Cromwell: Tank = {
@@ -54,8 +54,8 @@ export const Cromwell: Tank = {
   count: 4016,
   mass: 28,
   engine: 600,
-  range: [270, 170],
-  speed: [64, 40],
+  range: { km: 270, mi: 170 },
+  speed: { km: 64, mi: 40 },
 };
 
 export const Valentine: Tank = {
@@ -67,8 +67,8 @@ export const Valentine: Tank = {
   count: 8275,
   mass: 16,
   engine: 210,
-  range: [140, 90],
-  speed: [24, 14],
+  range: { km: 140, mi: 90 },
+  speed: { km: 24, mi: 14 },
 };
 
 export const Comet: Tank = {
@@ -80,8 +80,8 @@ export const Comet: Tank = {
   count: 1200,
   mass: 36,
   engine: 600,
-  range: [198, 123],
-  speed: [52, 32],
+  range: { km: 198, mi: 123 },
+  speed: { km: 52, mi: 32 },
 };
 
 export const Archer: Tank = {
@@ -93,8 +93,8 @@ export const Archer: Tank = {
   count: 655,
   mass: 15,
   engine: 192,
-  range: [230, 140],
-  speed: [32, 20],
+  range: { km: 230, mi: 140 },
+  speed: { km: 32, mi: 20 },
 };
 
 export const Centurion: Tank = {
@@ -106,8 +106,8 @@ export const Centurion: Tank = {
   count: 4423,
   mass: 51,
   engine: 650,
-  range: [100, 62],
-  speed: [34, 21],
+  range: { km: 100, mi: 62 },
+  speed: { km: 34, mi: 21 },
 };
 
 export const Chieftain: Tank = {
@@ -119,8 +119,8 @@ export const Chieftain: Tank = {
   count: 1896,
   mass: 56,
   engine: 750,
-  range: [500, 310],
-  speed: [40, 25],
+  range: { km: 500, mi: 310 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const Scorpion: Tank = {
@@ -132,8 +132,8 @@ export const Scorpion: Tank = {
   count: 3000,
   mass: 9,
   engine: 190,
-  range: [756, 470],
-  speed: [72, 45],
+  range: { km: 756, mi: 470 },
+  speed: { km: 72, mi: 45 },
 };
 
 export const Challenger1: Tank = {
@@ -145,8 +145,8 @@ export const Challenger1: Tank = {
   count: 420,
   mass: 62,
   engine: 1200,
-  range: [450, 280],
-  speed: [56, 35],
+  range: { km: 450, mi: 280 },
+  speed: { km: 56, mi: 35 },
 };
 
 export const Challenger2: Tank = {
@@ -158,6 +158,6 @@ export const Challenger2: Tank = {
   count: 447,
   mass: 64,
   engine: 1200,
-  range: [550, 340],
-  speed: [59, 37],
+  range: { km: 550, mi: 340 },
+  speed: { km: 59, mi: 37 },
 };

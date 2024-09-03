@@ -54,8 +54,8 @@ export type Tank = {
   count: number;            // number of tanks built
   mass: number;             // tons
   engine: number;           // horsepower
-  range: [number, number];  // [km, mi]
-  speed: [number, number];  // [km, mi]
+  range: { km: number, mi: number };  // [km, mi]
+  speed: { km: number, mi: number };  // [km, mi]
 };
 
 export type TankImage = {

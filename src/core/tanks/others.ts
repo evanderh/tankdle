@@ -22,8 +22,8 @@ export const K2: Tank = {
   count: 260,
   mass: 56,
   engine: 1500,
-  range: [450, 280],
-  speed: [70, 43],
+  range: { km: 450, mi: 280 },
+  speed: { km: 70, mi: 43 },
 };
 
 export const TR85: Tank = {
@@ -35,8 +35,8 @@ export const TR85: Tank = {
   count: 617,
   mass: 42,
   engine: 830,
-  range: [400, 250],
-  speed: [60, 37],
+  range: { km: 400, mi: 250 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const RamsesII: Tank = {
@@ -48,8 +48,8 @@ export const RamsesII: Tank = {
   count: 425,
   mass: 48,
   engine: 908,
-  range: [530, 330],
-  speed: [69, 43],
+  range: { km: 530, mi: 330 },
+  speed: { km: 69, mi: 43 },
 };
 
 export const T84: Tank = {
@@ -61,8 +61,8 @@ export const T84: Tank = {
   count: 425,
   mass: 51,
   engine: 1200,
-  range: [500, 310],
-  speed: [70, 43],
+  range: { km: 500, mi: 310 },
+  speed: { km: 70, mi: 43 },
 };
 
 export const Strv103: Tank = {
@@ -74,8 +74,8 @@ export const Strv103: Tank = {
   count: 290,
   mass: 42,
   engine: 780,
-  range: [390, 240],
-  speed: [60, 37],
+  range: { km: 390, mi: 240 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const BobSemple: Tank = {
@@ -87,8 +87,8 @@ export const BobSemple: Tank = {
   count: 3,
   mass: 25,
   engine: 127,
-  range: [160, 99],
-  speed: [24, 15],
+  range: { km: 160, mi: 99 },
+  speed: { km: 24, mi: 15 },
 };
 
 export const TAM: Tank = {
@@ -100,6 +100,6 @@ export const TAM: Tank = {
   count: 280,
   mass: 31,
   engine: 720,
-  range: [580, 370],
-  speed: [75, 47],
+  range: { km: 580, mi: 370 },
+  speed: { km: 75, mi: 47 },
 };

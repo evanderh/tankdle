@@ -11,8 +11,8 @@ export const AlZarrar: Tank = {
   count: 750,
   mass: 44,
   engine: 730,
-  range: [450, 280],
-  speed: [65, 40],
+  range: { km: 450, mi: 280 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const AlKhalid: Tank = {
@@ -24,6 +24,6 @@ export const AlKhalid: Tank = {
   count: 1144,
   mass: 46,
   engine: 1200,
-  range: [500, 310],
-  speed: [72, 45],
+  range: { km: 500, mi: 310 },
+  speed: { km: 72, mi: 45 },
 };

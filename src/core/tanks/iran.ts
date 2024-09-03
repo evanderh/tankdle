@@ -11,8 +11,8 @@ export const Type72Z: Tank = {
   count: 400,
   mass: 36,
   engine: 780,
-  range: [440, 275],
-  speed: [65, 40],
+  range: { km: 440, mi: 275 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const ZulfiqarI: Tank = {
@@ -24,8 +24,8 @@ export const ZulfiqarI: Tank = {
   count: 400,
   mass: 52,
   engine: 780,
-  range: [450, 280],
-  speed: [65, 40],
+  range: { km: 450, mi: 280 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const ZulfiqarIII: Tank = {
@@ -37,6 +37,6 @@ export const ZulfiqarIII: Tank = {
   count: 750,
   mass: 44,
   engine: 1000,
-  range: [450, 280],
-  speed: [75, 47],
+  range: { km: 450, mi: 280 },
+  speed: { km: 75, mi: 47 },
 };

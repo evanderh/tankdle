@@ -11,8 +11,8 @@ export const Vijayanta: Tank = {
   count: 2200,
   mass: 39,
   engine: 535,
-  range: [530, 330],
-  speed: [50, 31],
+  range: { km: 530, mi: 330 },
+  speed: { km: 50, mi: 31 },
 };
 
 export const Arjun: Tank = {
@@ -24,6 +24,6 @@ export const Arjun: Tank = {
   count: 141,
   mass: 59,
   engine: 1400,
-  range: [450, 280],
-  speed: [70, 43],
+  range: { km: 450, mi: 280 },
+  speed: { km: 70, mi: 43 },
 };

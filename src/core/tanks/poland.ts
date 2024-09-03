@@ -9,8 +9,8 @@ export const PT91: Tank = {
   count: 281,
   mass: 49,
   engine: 1000,
-  range: [650, 400],
-  speed: [70, 43],
+  range: { km: 650, mi: 400 },
+  speed: { km: 70, mi: 43 },
 };
 
 export const TKS: Tank = {
@@ -22,6 +22,6 @@ export const TKS: Tank = {
   count: 575,
   mass: 2,
   engine: 46,
-  range: [200, 120],
-  speed: [46, 29]
+  range: { km: 200, mi: 120 },
+  speed: { km: 46, mi: 29 }
 };

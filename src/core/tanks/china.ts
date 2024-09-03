@@ -24,8 +24,8 @@ export const Type59: Tank = {
   count: 9500,
   mass: 36,
   engine: 520,
-  range: [450, 280],
-  speed: [50, 31],
+  range: { km: 450, mi: 280 },
+  speed: { km: 50, mi: 31 },
 };
 
 export const Type62: Tank = {
@@ -37,8 +37,8 @@ export const Type62: Tank = {
   count: 1500,
   mass: 21,
   engine: 430,
-  range: [500, 310],
-  speed: [60, 37],
+  range: { km: 500, mi: 310 },
+  speed: { km: 60, mi: 37 },
 };
 
 export const Type69_79: Tank = {
@@ -50,8 +50,8 @@ export const Type69_79: Tank = {
   count: 3200,
   mass: 37,
   engine: 580,
-  range: [440, 275],
-  speed: [50, 31],
+  range: { km: 440, mi: 275 },
+  speed: { km: 50, mi: 31 },
 };
 
 export const Type80_88: Tank = {
@@ -63,8 +63,8 @@ export const Type80_88: Tank = {
   count: 3500,
   mass: 38,
   engine: 730,
-  range: [500, 310],
-  speed: [57, 35],
+  range: { km: 500, mi: 310 },
+  speed: { km: 57, mi: 35 },
 };
 
 export const Type96: Tank = {
@@ -76,8 +76,8 @@ export const Type96: Tank = {
   count: 2500,
   mass: 41,
   engine: 582,
-  range: [400, 250],
-  speed: [65, 40],
+  range: { km: 400, mi: 250 },
+  speed: { km: 65, mi: 40 },
 };
 
 export const Type99: Tank = {
@@ -89,8 +89,8 @@ export const Type99: Tank = {
   count: 1300,
   mass: 55,
   engine: 1119,
-  range: [600, 370],
-  speed: [75, 47],
+  range: { km: 600, mi: 370 },
+  speed: { km: 75, mi: 47 },
 };
 
 export const Type15: Tank = {
@@ -102,6 +102,6 @@ export const Type15: Tank = {
   count: 500,
   mass: 33,
   engine: 1000,
-  range: [469, 291],
-  speed: [70, 43],
+  range: { km: 469, mi: 291 },
+  speed: { km: 70, mi: 43 },
 };
