@@ -6,8 +6,10 @@ import { Tank, TankRole, TankOrigin } from "../types";
 // M26 Pershing
 // M10 Wolverine (Tank Destroyer)
 // M18 Hellcat (Tank Destroyer)
+// T28 Super Heavy Tank (Experimental)
 
 // Cold War:
+// M41 Walker Bulldog (Light Tank)
 // M48 Patton
 // M60 Patton
 // M103 (Heavy Tank)
@@ -15,23 +17,6 @@ import { Tank, TankRole, TankOrigin } from "../types";
 
 // Modern:
 // M1 Abrams (M1A1, M1A2, M1A2 SEP v3/v4)
-
-// Other:
-// M41 Walker Bulldog (Light Tank)
-// T28 Super Heavy Tank (Experimental)
-
-export const T28: Tank = {
-  name: 'T28',
-  url: 'https://en.wikipedia.org/wiki/T28_super-heavy_tank',
-  role: TankRole.SuperHeavy,
-  year: 1945,
-  origin: TankOrigin.USA,
-  count: 2,
-  mass: 86,
-  engine: 500,
-  range: { km: 160, mi: 100 },
-  speed: { km: 13, mi: 8 },
-};
 
 export const M4: Tank = {
   name: 'M4 Sherman',
@@ -98,6 +83,32 @@ export const M18: Tank = {
   speed: { km: 89, mi: 55 },
 };
 
+export const T28: Tank = {
+  name: 'T28',
+  url: 'https://en.wikipedia.org/wiki/T28_super-heavy_tank',
+  role: TankRole.SuperHeavy,
+  year: 1945,
+  origin: TankOrigin.USA,
+  count: 2,
+  mass: 86,
+  engine: 500,
+  range: { km: 160, mi: 100 },
+  speed: { km: 13, mi: 8 },
+};
+
+export const M41: Tank = {
+  name: 'M41 Walker Bulldog',
+  url: 'https://en.wikipedia.org/wiki/M41_Walker_Bulldog',
+  role: TankRole.Light,
+  year: 1951,
+  origin: TankOrigin.USA,
+  count: 5467,
+  mass: 26,
+  engine: 500,
+  range: { km: 160, mi: 100 },
+  speed: { km: 72, mi: 45 },
+};
+
 export const M48: Tank = {
   name: 'M48 Patton',
   url: 'https://en.wikipedia.org/wiki/M48_Patton',
@@ -150,18 +161,7 @@ export const M551: Tank = {
   speed: { km: 69, mi: 43 },
 };
 
-export const M41: Tank = {
-  name: 'M41 Walker Bulldog',
-  url: 'https://en.wikipedia.org/wiki/M41_Walker_Bulldog',
-  role: TankRole.Light,
-  year: 1951,
-  origin: TankOrigin.USA,
-  count: 5467,
-  mass: 26,
-  engine: 500,
-  range: { km: 160, mi: 100 },
-  speed: { km: 72, mi: 45 },
-};
+
 
 export const M1: Tank = {
   name: 'M1 Abrams',

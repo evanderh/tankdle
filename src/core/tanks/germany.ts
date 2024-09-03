@@ -11,15 +11,13 @@ import { TankOrigin } from "../types";
 // StuG III (Assault Gun)
 // Jagdpanther (Tank Destroyer)
 // Elefant (Tank Destroyer)
+// Maus (Super Heavy Tank)
 
 // Cold War:
 // Leopard 1
 
 // Modern:
 // Leopard 2 (A4, A5, A6, A7)
-
-// Other:
-// Maus (Super Heavy Tank, Experimental)
 
 export const PanzerIII: Tank = {
   name: 'Panzer III',
