@@ -13,13 +13,14 @@ import { Tank, TankImage, TankOrigin } from "../types";
 
 export const tankImages: TankImage[] = [
   {
+    tank: usa.M1,
+    url: 'tanks/tank1.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Mounted_Soldier_System_(MSS).jpg">See page for author</a>, Public domain, via Wikimedia Commons',
+  },
+  {
     tank: russia.T14,
     url: 'tanks/tank2.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:4mayrehearsal_09.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
-  },
-  {
-    tank: usa.M1,
-    url: 'tanks/tank1.jpg',
   },
   {
     tank: others.BobSemple,

@@ -31,9 +31,11 @@ const TankInput = ({
 
   return (
     <>
-      <h4 style={{ textAlign: 'end' }}>
-        Guess {1+numGuesses} of {maxGuesses}
-      </h4>
+      {status === 'playing' &&
+        <h4 style={{ textAlign: 'end' }}>
+          Guess {1+numGuesses} of {maxGuesses}
+        </h4>
+      }
       <Grid2 container spacing={1}>
         <Grid2 size="grow">
           <Autocomplete

@@ -251,7 +251,7 @@ export const Zulfiqar3: Tank = {
 
 // New Zealand: Bob Semple
 export const BobSemple: Tank = {
-  name: 'Bob Semple',
+  name: 'Bob Semple tank',
   url: 'https://en.wikipedia.org/wiki/Bob_Semple_tank',
   role: TankRole.Light,
   year: 1940,

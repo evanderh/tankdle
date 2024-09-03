@@ -12,6 +12,7 @@ const Tanks = () => {
             component={RouterLink}
             to={`/?tank=${ix+1}`}
             key={tankImage.tank.name}
+            style={{ margin: '1rem' }}
           >{ix+1}</MuiLink>
         ))
       }

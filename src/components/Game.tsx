@@ -35,16 +35,19 @@ const Game = ({ tankImage }: Props) => {
         status={status}
       />
       {status === 'win' &&
-        <p>Correct!</p>
+        <h1>Correct!</h1>
       }
       {status === 'loss' &&
-        <p>Better luck next time!</p>
+        <h1>Better luck next time!</h1>
       }
       {status !== 'playing' &&
-        <>
-          <p>The answer was: {tankImage.tank.name}</p>
+        <h4>
+          The answer was:
+          {' '}
+          <a href={tankImage.tank.url}>{tankImage.tank.name}</a>
+          {'. '}
           <MuiLink to="/tanks" component={RouterLink}>Play any tank</MuiLink>
-        </>
+        </h4>
       }
 
       <TankInput
