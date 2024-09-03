@@ -6,14 +6,7 @@ import * as france from './france';
 import * as china from './china';
 import * as israel from './israel';
 import * as italy from './italy';
-import * as india from "./india";
-import * as pakistan from "./pakistan";
-import * as iran from "./iran";
 import * as japan from "./japan";
-import * as taiwan from "./taiwan";
-import * as switzerland from "./switzerland";
-import * as poland from "./poland";
-import * as saf from './saf';
 import * as others from "./others";
 
 import { Tank, TankImage, TankOrigin } from "../types";
@@ -34,7 +27,7 @@ export const tankImages: TankImage[] = [
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:Pratt,_J,_fl_1974_-_Photograph_of_tank_designed_by_Robert_Semple.jpg">Unidentified photographer</a>, Public domain, via Wikimedia Commons',
   },
   {
-    tank: poland.TKS,
+    tank: others.TKS,
     url: 'tanks/tank4.jpg',
     attribution: 'Attribution, <a href="https://commons.wikimedia.org/w/index.php?curid=712156">Link</a>',
   },
@@ -49,14 +42,7 @@ export const tanks: Tank[] = [
   china,
   israel,
   italy,
-  india,
-  pakistan,
-  iran,
   japan,
-  taiwan,
-  switzerland,
-  poland,
-  saf,
   others,
 ].flatMap(c => Object.values(c));
 
@@ -80,30 +66,38 @@ export const getTankImage = (index: string | null): TankImage => {
 export const countryCode: {
   [key in TankOrigin]: string;
 } = {
-  [TankOrigin.USA]: 'us',
-  [TankOrigin.Russia]: 'ru',
-  [TankOrigin.Poland]: 'pl',
-  [TankOrigin.NewZealand]: 'nz',
-  [TankOrigin.UK]: 'gb',
-  [TankOrigin.Soviet]: 'su',
+  [TankOrigin.Australia]: 'au',
+  [TankOrigin.Argentina]: 'ar',
+  [TankOrigin.Brazil]: 'br',
+  [TankOrigin.Canada]: 'ca',
+  [TankOrigin.China]: 'cn',
+  [TankOrigin.Czech]: 'cz',
+  [TankOrigin.Egypt]: 'eg',
+  [TankOrigin.France]: 'fr',
+  [TankOrigin.Germany]: 'de',
+  [TankOrigin.Hungary]: 'hu',
+  [TankOrigin.India]: 'in',
+  [TankOrigin.Iran]: 'ir',
+  [TankOrigin.Israel]: 'il',
+  [TankOrigin.Italy]: 'it',
   [TankOrigin.Japan]: 'jp',
   [TankOrigin.NaziGermany]: 'ng',
-  [TankOrigin.WestGermany]: 'de',
-  [TankOrigin.Switzerland]: 'ch',
-  [TankOrigin.France]: 'fr',
-  [TankOrigin.Israel]: 'il',
-  [TankOrigin.Sweden]: 'se',
-  [TankOrigin.SouthAfrica]: 'za',
-  [TankOrigin.China]: 'cn',
-  [TankOrigin.Italy]: 'it',
-  [TankOrigin.Argentina]: 'ar',
-  [TankOrigin.Romania]: 'ro',
-  [TankOrigin.Taiwan]: 'tw',
-  [TankOrigin.Iran]: 'ir',
-  [TankOrigin.Pakistan]: 'pk',
-  [TankOrigin.Egypt]: 'eg',
-  [TankOrigin.Ukraine]: 'ua',
-  [TankOrigin.SouthKorea]: 'kr',
+  [TankOrigin.NewZealand]: 'nz',
   [TankOrigin.NorthKorea]: 'kp',
-  [TankOrigin.India]: 'in',
+  [TankOrigin.Pakistan]: 'pk',
+  [TankOrigin.Poland]: 'pl',
+  [TankOrigin.Romania]: 'ro',
+  [TankOrigin.Russia]: 'ru',
+  [TankOrigin.SouthAfrica]: 'za',
+  [TankOrigin.SouthKorea]: 'kr',
+  [TankOrigin.Soviet]: 'su',
+  [TankOrigin.Sweden]: 'se',
+  [TankOrigin.Switzerland]: 'ch',
+  [TankOrigin.Taiwan]: 'tw',
+  [TankOrigin.Turkey]: 'tr',
+  [TankOrigin.UK]: 'gb',
+  [TankOrigin.Ukraine]: 'ua',
+  [TankOrigin.USA]: 'us',
+  [TankOrigin.WestGermany]: 'de',
+  [TankOrigin.Yugoslavia]: 'yu',
 };

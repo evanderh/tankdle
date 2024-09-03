@@ -1,8 +1,9 @@
 import { Tank, TankRole, TankOrigin  } from "../types";
 
 // Cold War:
-// Type 59 (Chinese version of T-54)
+// Type 59
 // Type 62 (Light Tank)
+// Type 63 (Light Tank)
 // Type 63 (Amphibious Light Tank)
 // Type 69/79
 // Type 80/88
@@ -10,7 +11,8 @@ import { Tank, TankRole, TankOrigin  } from "../types";
 // Modern:
 // Type 96
 // Type 99
-// ZBL-09 (Armored Fighting Vehicle)
+// Type 04 (Infantry Fighting Vehicle)
+// Type 08 (Armored Fighting Vehicle)
 // Type 15 (Light Tank)
 
 export const Type59: Tank = {
@@ -39,8 +41,21 @@ export const Type62: Tank = {
   speed: { km: 60, mi: 37 },
 };
 
-export const Type63: Tank = {
-  name: 'Type 63',
+export const Type63Tank: Tank = {
+  name: 'Type 63 Tank',
+  url: 'https://en.wikipedia.org/wiki/Type_63_(tank)',
+  role: TankRole.Light,
+  year: 1963,
+  origin: TankOrigin.China,
+  count: 1550,
+  mass: 20,
+  engine: 402,
+  range: { km: 370, mi: 230 },
+  speed: { km: 65, mi: 40 },
+};
+
+export const Type63APC: Tank = {
+  name: 'Type 63 APC',
   url: 'https://en.wikipedia.org/wiki/Type_63_(armoured_personnel_carrier)',
   role: TankRole.APC,
   year: 1963,
@@ -49,7 +64,7 @@ export const Type63: Tank = {
   mass: 13,
   engine: 320,
   range: { km: 500, mi: 310 },
-  speed: { km: 65, mi: 40 },
+  speed: { km: 64, mi: 40 },
 };
 
 export const Type69_79: Tank = {
@@ -104,8 +119,21 @@ export const Type99: Tank = {
   speed: { km: 75, mi: 47 },
 };
 
-export const ZBL08: Tank = {
-  name: 'ZBL-08',
+export const Type04: Tank = {
+  name: 'Type 04',
+  url: 'https://en.wikipedia.org/wiki/ZBD-04',
+  role: TankRole.IFV,
+  year: 1997,
+  origin: TankOrigin.China,
+  count: 2950,
+  mass: 20,
+  engine: 590,
+  range: { km: 500, mi: 310 },
+  speed: { km: 65, mi: 40 },
+};
+
+export const Type08: Tank = {
+  name: 'Type 08',
   url: 'https://en.wikipedia.org/wiki/Type_08',
   role: TankRole.APC,
   year: 2006,
@@ -129,3 +157,4 @@ export const Type15: Tank = {
   range: { km: 469, mi: 291 },
   speed: { km: 70, mi: 43 },
 };
+

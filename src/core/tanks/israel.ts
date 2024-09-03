@@ -1,6 +1,4 @@
-import { Tank } from "../types";
-import { TankRole } from "../types";
-import { TankOrigin } from "../types";
+import { Tank, TankRole, TankOrigin } from "../types";
 
 // Cold War:
 // Merkava Mark I

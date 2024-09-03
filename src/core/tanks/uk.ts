@@ -1,18 +1,19 @@
-import { Tank } from "../types";
-import { TankRole } from "../types";
-import { TankOrigin } from "../types";
+import { Tank, TankRole, TankOrigin } from "../types";
 
 // World War II:
 // Matilda II
+// Crusader
+// Valentine
 // Churchill
 // Cromwell
-// Valentine
-// Comet
 // Archer (Tank Destroyer)
+// Comet
+// Sherman Firefly
 
 // Cold War:
 // Centurion
-// Chieftain
+// Conqueror
+// FV 4201 Chieftain
 // FV101 Scorpion (Light Tank)
 // Challenger 1
 
@@ -22,7 +23,7 @@ import { TankOrigin } from "../types";
 export const MatildaII: Tank = {
   name: 'Matilda II',
   url: 'https://en.wikipedia.org/wiki/Matilda_II',
-  role: TankRole.Heavy,
+  role: TankRole.Medium,
   year: 1937,
   origin: TankOrigin.UK,
   count: 2987,
@@ -30,6 +31,32 @@ export const MatildaII: Tank = {
   engine: 190,
   range: { km: 80, mi: 50 },
   speed: { km: 24, mi: 15 },
+};
+
+export const Crusader: Tank = {
+  name: 'Crusader',
+  url: 'https://en.wikipedia.org/wiki/Crusader_tank',
+  role: TankRole.Medium,
+  year: 1940,
+  origin: TankOrigin.UK,
+  count: 5300,
+  mass: 20,
+  engine: 340,
+  range: { km: 227, mi: 141 },
+  speed: { km: 42, mi: 26 },
+};
+
+export const Valentine: Tank = {
+  name: 'Valentine',
+  url: 'https://en.wikipedia.org/wiki/Valentine_tank',
+  role: TankRole.Medium,
+  year: 1940,
+  origin: TankOrigin.UK,
+  count: 8275,
+  mass: 16,
+  engine: 210,
+  range: { km: 140, mi: 90 },
+  speed: { km: 24, mi: 14 },
 };
 
 export const Churchill: Tank = {
@@ -58,17 +85,17 @@ export const Cromwell: Tank = {
   speed: { km: 64, mi: 40 },
 };
 
-export const Valentine: Tank = {
-  name: 'Valentine',
-  url: 'https://en.wikipedia.org/wiki/Valentine_tank',
-  role: TankRole.Light,
-  year: 1940,
+export const Archer: Tank = {
+  name: 'Archer',
+  url: 'https://en.wikipedia.org/wiki/Archer_(tank_destroyer)',
+  role: TankRole.TankDestroyer,
+  year: 1943,
   origin: TankOrigin.UK,
-  count: 8275,
-  mass: 16,
-  engine: 210,
-  range: { km: 140, mi: 90 },
-  speed: { km: 24, mi: 14 },
+  count: 655,
+  mass: 15,
+  engine: 192,
+  range: { km: 230, mi: 140 },
+  speed: { km: 32, mi: 20 },
 };
 
 export const Comet: Tank = {
@@ -84,17 +111,17 @@ export const Comet: Tank = {
   speed: { km: 52, mi: 32 },
 };
 
-export const Archer: Tank = {
-  name: 'Archer',
-  url: 'https://en.wikipedia.org/wiki/Archer_(tank_destroyer)',
-  role: TankRole.TankDestroyer,
-  year: 1943,
+export const ShermanFirefly: Tank = {
+  name: 'Sherman Firefly',
+  url: 'https://en.wikipedia.org/wiki/Sherman_Firefly',
+  role: TankRole.Medium,
+  year: 1944,
   origin: TankOrigin.UK,
-  count: 655,
-  mass: 15,
-  engine: 192,
-  range: { km: 230, mi: 140 },
-  speed: { km: 32, mi: 20 },
+  count: 2100,
+  mass: 35,
+  engine: 425,
+  range: { km: 193, mi: 120 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const Centurion: Tank = {
@@ -108,6 +135,19 @@ export const Centurion: Tank = {
   engine: 650,
   range: { km: 100, mi: 62 },
   speed: { km: 34, mi: 21 },
+};
+
+export const Conqueror: Tank = {
+  name: 'Conqueror',
+  url: 'https://en.wikipedia.org/wiki/Conqueror_(tank)',
+  role: TankRole.Heavy,
+  year: 1955,
+  origin: TankOrigin.UK,
+  count: 185,
+  mass: 64,
+  engine: 810,
+  range: { km: 161, mi: 100 },
+  speed: { km: 35, mi: 22 },
 };
 
 export const Chieftain: Tank = {

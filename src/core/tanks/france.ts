@@ -1,9 +1,11 @@
-import { Tank } from "../types";
-import { TankRole } from "../types";
-import { TankOrigin } from "../types";
+import { Tank, TankRole, TankOrigin } from "../types";
+
+// World War I:
+// Renault FT-17
 
 // World War II:
 // Char B1
+// Hotchkiss H35
 // Renault R35
 // Somua S35
 
@@ -11,12 +13,26 @@ import { TankOrigin } from "../types";
 // Panhard EBR (Armored Car)
 // AMX-13 (Light Tank)
 // AMX-30
-// AMX-10 RC (Armored Car)
+// AMX-10P (Infantry Fighting Vehicle)
+// AMX-10 RC (Reconnaissance Vehicle)
 
 // Modern:
 // Leclerc
 
-export const CharB1: Tank = {
+export const RenaultFT17: Tank = {
+  name: 'Renault FT-17',
+  url: 'https://en.wikipedia.org/wiki/Renault_FT',
+  role: TankRole.Light,
+  year: 1917,
+  origin: TankOrigin.France,
+  count: 3000,
+  mass: 7,
+  engine: 39,
+  range: { km: 60, mi: 37 },
+  speed: { km: 7, mi: 4 },
+};
+
+export const B1: Tank = {
   name: 'Char B1',
   url: 'https://en.wikipedia.org/wiki/Char_B1',
   role: TankRole.Heavy,
@@ -29,7 +45,20 @@ export const CharB1: Tank = {
   speed: { km: 28, mi: 17 },
 };
 
-export const RenaultR35: Tank = {
+export const H35: Tank = {
+  name: 'Hotchkiss H35',
+  url: 'https://en.wikipedia.org/wiki/Hotchkiss_H35',
+  role: TankRole.Light,
+  year: 1936,
+  origin: TankOrigin.France,
+  count: 1200,
+  mass: 11,
+  engine: 78,
+  range: { km: 129, mi: 80 },
+  speed: { km: 28, mi: 17 },
+};
+
+export const R35: Tank = {
   name: 'Renault R35',
   url: 'https://en.wikipedia.org/wiki/Renault_R35',
   role: TankRole.Light,
@@ -42,7 +71,7 @@ export const RenaultR35: Tank = {
   speed: { km: 20, mi: 12 },
 };
 
-export const SOMUA: Tank = {
+export const S35: Tank = {
   name: 'Somua S35',
   url: 'https://en.wikipedia.org/wiki/SOMUA_S35',
   role: TankRole.Medium,
@@ -94,10 +123,23 @@ export const AMX30: Tank = {
   speed: { km: 65, mi: 40 },
 };
 
-export const AMX10: Tank = {
+export const AMX10P: Tank = {
+  name: 'AMX-10P',
+  url: 'https://en.wikipedia.org/wiki/AMX-10P',
+  role: TankRole.IFV,
+  year: 1973,
+  origin: TankOrigin.France,
+  count: 1750,
+  mass: 14,
+  engine: 275,
+  range: { km: 600, mi: 370 },
+  speed: { km: 65, mi: 40 },
+};
+
+export const AMX10RC: Tank = {
   name: 'AMX-10 RC',
   url: 'https://en.wikipedia.org/wiki/AMX-10_RC',
-  role: TankRole.ArmoredCar,
+  role: TankRole.ReconnaissanceVehicle,
   year: 1981,
   origin: TankOrigin.France,
   count: 464,

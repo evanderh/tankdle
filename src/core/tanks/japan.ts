@@ -1,22 +1,23 @@
-import { Tank } from "../types";
-import { TankRole } from "../types";
-import { TankOrigin } from "../types";
+import { Tank, TankRole, TankOrigin } from "../types";
 
 // World War II:
 // Type 95 Ha-Go
 // Type 97 Te-Ke
 // Type 97 Chi-Ha
+// Type 1 Chi-He
+// Type 2 Ka-Mi
 // Type 3 Chi-Nu
+// Type 4 Ke-Nu
 
 // Cold War
 // Type 61
 // Type 74
 
 // Modern:
-// Type 10
 // Type 90
+// Type 10
 
-export const Type95: Tank = {
+export const Type95HaGo: Tank = {
   name: 'Type 95 Ha-Go',
   url: 'https://en.wikipedia.org/wiki/Type_95_Ha-Go_light_tank',
   role: TankRole.Light,
@@ -55,7 +56,34 @@ export const Type97ChiHa: Tank = {
   speed: { km: 38, mi: 24 },
 };
 
-export const Type3: Tank = {
+export const Type1ChiHe: Tank = {
+  name: 'Type 1 Chi-He',
+  url: 'https://en.wikipedia.org/wiki/Type_1_Chi-He',
+  role: TankRole.Medium,
+  year: 1941,
+  origin: TankOrigin.Japan,
+  count: 170,
+  mass: 17,
+  engine: 240,
+  range: { km: 210, mi: 130 },
+  speed: { km: 44, mi: 27 },
+};
+
+export const Type2KaMi: Tank = {
+  name: 'Type 2 Ka-Mi',
+  url: 'https://en.wikipedia.org/wiki/Type_2_Ka-Mi',
+  role: TankRole.Light,
+  year: 1942,
+  origin: TankOrigin.Japan,
+  count: 182,
+  mass: 12,
+  engine: 115,
+  range: { km: 170, mi: 105 },
+  speed: { km: 37, mi: 23 },
+};
+
+
+export const Type3ChiNu: Tank = {
   name: 'Type 3 Chi-Nu',
   url: 'https://en.wikipedia.org/wiki/Type_3_Chi-Nu_medium_tank',
   role: TankRole.Medium,
@@ -66,6 +94,19 @@ export const Type3: Tank = {
   engine: 240,
   range: { km: 210, mi: 130 },
   speed: { km: 39, mi: 24 },
+};
+
+export const Type4KeNu: Tank = {
+  name: 'Type 4 Ke-Nu',
+  url: 'https://en.wikipedia.org/wiki/Type_4_Ke-Nu',
+  role: TankRole.Light,
+  year: 1944,
+  origin: TankOrigin.Japan,
+  count: 100,
+  mass: 8,
+  engine: 120,
+  range: { km: 240, mi: 150 },
+  speed: { km: 40, mi: 25 },
 };
 
 export const Type61: Tank = {

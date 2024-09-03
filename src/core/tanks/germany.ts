@@ -3,13 +3,17 @@ import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // World War II:
+// Panzer I
+// Panzer II
 // Panzer III
 // Panzer IV
 // Tiger I
-// Tiger II (King Tiger)
+// Tiger II
 // Panther
 // StuG III (Assault Gun)
 // Jagdpanther (Tank Destroyer)
+// Hetzer (Jagdpanzer 38) (Tank Destroyer)
+// Jagdpanzer IV (Tank Destroyer)
 // Elefant (Tank Destroyer)
 // Maus (Super Heavy Tank)
 
@@ -18,6 +22,32 @@ import { TankOrigin } from "../types";
 
 // Modern:
 // Leopard 2 (A4, A5, A6, A7)
+
+export const PanzerI: Tank = {
+  name: 'Panzer I',
+  url: 'https://en.wikipedia.org/wiki/Panzer_I',
+  role: TankRole.Light,
+  year: 1934,
+  origin: TankOrigin.NaziGermany,
+  count: 1659,
+  mass: 6,
+  engine: 60,
+  range: { km: 200, mi: 120 },
+  speed: { km: 37, mi: 23 },
+};
+
+export const PanzerII: Tank = {
+  name: 'Panzer II',
+  url: 'https://en.wikipedia.org/wiki/Panzer_II',
+  role: TankRole.Light,
+  year: 1935,
+  origin: TankOrigin.NaziGermany,
+  count: 1856,
+  mass: 9,
+  engine: 140,
+  range: { km: 190, mi: 120 },
+  speed: { km: 40, mi: 25 },
+};
 
 export const PanzerIII: Tank = {
   name: 'Panzer III',
@@ -110,6 +140,32 @@ export const Jagdpanther: Tank = {
   speed: { km: 46, mi: 29 },
 };
 
+export const Jagdpanzer38: Tank = {
+  name: 'Jagdpanzer 38',
+  url: 'https://en.wikipedia.org/wiki/Hetzer',
+  role: TankRole.TankDestroyer,
+  year: 1944,
+  origin: TankOrigin.NaziGermany,
+  count: 2827,
+  mass: 16,
+  engine: 160,
+  range: { km: 180, mi: 110 },
+  speed: { km: 42, mi: 26 },
+};
+
+export const Hetzer: Tank = {
+  name: 'Hetzer',
+  url: 'https://en.wikipedia.org/wiki/Jagdpanzer_IV',
+  role: TankRole.TankDestroyer,
+  year: 1944,
+  origin: TankOrigin.NaziGermany,
+  count: 2000,
+  mass: 26,
+  engine: 296,
+  range: { km: 210, mi: 130 },
+  speed: { km: 35, mi: 22 },
+};
+
 export const Elefant: Tank = {
   name: 'Elefant',
   url: 'https://en.wikipedia.org/wiki/Elefant',
@@ -154,7 +210,7 @@ export const Leopard2: Tank = {
   url: 'https://en.wikipedia.org/wiki/Leopard_2',
   role: TankRole.MBT,
   year: 1979,
-  origin: TankOrigin.WestGermany,
+  origin: TankOrigin.Germany,
   count: 3600,
   mass: 62,
   engine: 1500,
