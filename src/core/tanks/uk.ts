@@ -1,5 +1,5 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // World War II:
@@ -22,7 +22,7 @@ import { TankOrigin } from "../types";
 export const MatildaII: Tank = {
   name: 'Matilda II',
   url: 'https://en.wikipedia.org/wiki/Matilda_II',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1937,
   origin: TankOrigin.UK,
   count: 2987,
@@ -35,7 +35,7 @@ export const MatildaII: Tank = {
 export const Churchill: Tank = {
   name: 'Churchill',
   url: 'https://en.wikipedia.org/wiki/Churchill_tank',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1941,
   origin: TankOrigin.UK,
   count: 5640,
@@ -48,7 +48,7 @@ export const Churchill: Tank = {
 export const Cromwell: Tank = {
   name: 'Cromwell',
   url: 'https://en.wikipedia.org/wiki/Cromwell_tank',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1942,
   origin: TankOrigin.UK,
   count: 4016,
@@ -61,7 +61,7 @@ export const Cromwell: Tank = {
 export const Valentine: Tank = {
   name: 'Valentine',
   url: 'https://en.wikipedia.org/wiki/Valentine_tank',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1940,
   origin: TankOrigin.UK,
   count: 8275,
@@ -74,7 +74,7 @@ export const Valentine: Tank = {
 export const Comet: Tank = {
   name: 'Comet',
   url: 'https://en.wikipedia.org/wiki/Comet_(tank)',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1944,
   origin: TankOrigin.UK,
   count: 1200,
@@ -87,7 +87,7 @@ export const Comet: Tank = {
 export const Archer: Tank = {
   name: 'Archer',
   url: 'https://en.wikipedia.org/wiki/Archer_(tank_destroyer)',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1943,
   origin: TankOrigin.UK,
   count: 655,
@@ -100,7 +100,7 @@ export const Archer: Tank = {
 export const Centurion: Tank = {
   name: 'Centurion',
   url: 'https://en.wikipedia.org/wiki/Centurion_(tank)',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1945,
   origin: TankOrigin.UK,
   count: 4423,
@@ -113,7 +113,7 @@ export const Centurion: Tank = {
 export const Chieftain: Tank = {
   name: 'FV 4201 Cheiftain',
   url: 'https://en.wikipedia.org/wiki/Chieftain_(tank)',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1959,
   origin: TankOrigin.UK,
   count: 1896,
@@ -126,7 +126,7 @@ export const Chieftain: Tank = {
 export const Scorpion: Tank = {
   name: 'FV101 Scorpion',
   url: 'https://en.wikipedia.org/wiki/FV101_Scorpion',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1972,
   origin: TankOrigin.UK,
   count: 3000,
@@ -139,7 +139,7 @@ export const Scorpion: Tank = {
 export const Challenger1: Tank = {
   name: 'Challenger 1',
   url: 'https://en.wikipedia.org/wiki/Challenger_1',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1983,
   origin: TankOrigin.UK,
   count: 420,
@@ -152,7 +152,7 @@ export const Challenger1: Tank = {
 export const Challenger2: Tank = {
   name: 'Challenger 2',
   url: 'https://en.wikipedia.org/wiki/Challenger_2',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1986,
   origin: TankOrigin.UK,
   count: 447,

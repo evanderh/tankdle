@@ -1,11 +1,11 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 export const Type72Z: Tank = {
   name: 'Type 72Z',
   url: 'https://en.wikipedia.org/wiki/Type_72Z',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1996,
   origin: TankOrigin.Iran,
   count: 400,
@@ -18,7 +18,7 @@ export const Type72Z: Tank = {
 export const ZulfiqarI: Tank = {
   name: 'Zulfiqar I',
   url: 'https://en.wikipedia.org/wiki/Zulfiqar_(tank)',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1993,
   origin: TankOrigin.Iran,
   count: 400,
@@ -31,7 +31,7 @@ export const ZulfiqarI: Tank = {
 export const ZulfiqarIII: Tank = {
   name: 'Zulfiqar III',
   url: 'https://en.wikipedia.org/wiki/Zulfiqar_(tank)#Zulfiqar-3',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1999,
   origin: TankOrigin.Iran,
   count: 750,

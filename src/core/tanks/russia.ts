@@ -1,5 +1,5 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // World War II:
@@ -28,7 +28,7 @@ import { TankOrigin } from "../types";
 export const T34: Tank = {
   name: 'T-34',
   url: 'https://en.wikipedia.org/wiki/T-34',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1940,
   origin: TankOrigin.Soviet,
   count: 84070,
@@ -41,7 +41,7 @@ export const T34: Tank = {
 export const KV1: Tank = {
   name: 'KV-1',
   url: 'https://en.wikipedia.org/wiki/Kliment_Voroshilov_tank',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1939,
   origin: TankOrigin.Soviet,
   count: 5219,
@@ -54,7 +54,7 @@ export const KV1: Tank = {
 export const IS2: Tank = {
   name: 'IS-2',
   url: 'https://en.wikipedia.org/wiki/IS-2',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1943,
   origin: TankOrigin.Soviet,
   count: 3854,
@@ -67,7 +67,7 @@ export const IS2: Tank = {
 export const SU76: Tank = {
   name: 'SU-76',
   url: 'https://en.wikipedia.org/wiki/SU-76',
-  type: TankType.SPG,
+  role: TankRole.SPG,
   year: 1942,
   origin: TankOrigin.Soviet,
   count: 14292,
@@ -80,7 +80,7 @@ export const SU76: Tank = {
 export const SU85: Tank = {
   name: 'SU-85',
   url: 'https://en.wikipedia.org/wiki/SU-85',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1943,
   origin: TankOrigin.Soviet,
   count: 2650,
@@ -93,7 +93,7 @@ export const SU85: Tank = {
 export const SU100: Tank = {
   name: 'SU-100',
   url: 'https://en.wikipedia.org/wiki/SU-100',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1944,
   origin: TankOrigin.Soviet,
   count: 4976,
@@ -106,7 +106,7 @@ export const SU100: Tank = {
 export const ISU122: Tank = {
   name: 'ISU-122',
   url: 'https://en.wikipedia.org/wiki/ISU-122',
-  type: TankType.AssaultGun,
+  role: TankRole.AssaultGun,
   year: 193,
   origin: TankOrigin.Soviet,
   count: 2410,
@@ -119,7 +119,7 @@ export const ISU122: Tank = {
 export const ISU152: Tank = {
   name: 'ISU-152',
   url: 'https://en.wikipedia.org/wiki/ISU-152',
-  type: TankType.AssaultGun,
+  role: TankRole.AssaultGun,
   year: 1943,
   origin: TankOrigin.Soviet,
   count: 4635,
@@ -132,7 +132,7 @@ export const ISU152: Tank = {
 export const PT76: Tank = {
   name: 'PT-76',
   url: 'https://en.wikipedia.org/wiki/PT-76',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1951,
   origin: TankOrigin.Soviet,
   count: 12000,
@@ -145,7 +145,7 @@ export const PT76: Tank = {
 export const T54: Tank = {
   name: 'T-54',
   url: 'https://en.wikipedia.org/wiki/T-54',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1945,
   origin: TankOrigin.Soviet,
   count: 35000,
@@ -158,7 +158,7 @@ export const T54: Tank = {
 export const T55: Tank = {
   name: 'T-55',
   url: 'https://en.wikipedia.org/wiki/T-54/T-55',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1958,
   origin: TankOrigin.Soviet,
   count: 27500,
@@ -171,7 +171,7 @@ export const T55: Tank = {
 export const T62: Tank = {
   name: 'T-62',
   url: 'https://en.wikipedia.org/wiki/T-62',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1958,
   origin: TankOrigin.Soviet,
   count: 22700,
@@ -184,7 +184,7 @@ export const T62: Tank = {
 export const T64: Tank = {
   name: 'T-64',
   url: 'https://en.wikipedia.org/wiki/T-64',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1958,
   origin: TankOrigin.Soviet,
   count: 13000,
@@ -197,7 +197,7 @@ export const T64: Tank = {
 export const T72: Tank = {
   name: 'T-72',
   url: 'https://en.wikipedia.org/wiki/T-72',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1971,
   origin: TankOrigin.Soviet,
   count: 25000,
@@ -210,7 +210,7 @@ export const T72: Tank = {
 export const T80: Tank = {
   name: 'T-80',
   url: 'https://en.wikipedia.org/wiki/T-80',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1975,
   origin: TankOrigin.Soviet,
   count: 5500,
@@ -223,7 +223,7 @@ export const T80: Tank = {
 export const T90: Tank = {
   name: 'T90',
   url: 'https://en.wikipedia.org/wiki/T-90',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1990,
   origin: TankOrigin.Russia,
   count: 4000,
@@ -236,7 +236,7 @@ export const T90: Tank = {
 export const T14: Tank = {
   name: 'T-14 Armata',
   url: 'https://en.wikipedia.org/wiki/T-14_Armata',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2015,
   origin: TankOrigin.Russia,
   count: 50,

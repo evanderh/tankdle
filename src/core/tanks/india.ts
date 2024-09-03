@@ -1,11 +1,11 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 export const Vijayanta: Tank = {
   name: 'Vijayanta',
   url: 'https://en.wikipedia.org/wiki/Vijayanta',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1964,
   origin: TankOrigin.India,
   count: 2200,
@@ -18,7 +18,7 @@ export const Vijayanta: Tank = {
 export const Arjun: Tank = {
   name: 'Arjun',
   url: 'https://en.wikipedia.org/wiki/Arjun_MBT',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2004,
   origin: TankOrigin.India,
   count: 141,

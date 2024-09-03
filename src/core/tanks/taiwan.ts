@@ -1,11 +1,11 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 export const CM11: Tank = {
   name: 'CM-11 Brave Tiger',
   url: 'https://en.wikipedia.org/wiki/CM-11_Brave_Tiger',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1988,
   origin: TankOrigin.Taiwan,
   count: 450,
@@ -18,7 +18,7 @@ export const CM11: Tank = {
 export const CM12: Tank = {
   name: 'CM-12',
   url: 'https://en.wikipedia.org/wiki/CM-12_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1990,
   origin: TankOrigin.Taiwan,
   count: 100,

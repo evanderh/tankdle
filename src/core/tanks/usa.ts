@@ -1,4 +1,4 @@
-import { Tank, TankType, TankOrigin } from "../types";
+import { Tank, TankRole, TankOrigin } from "../types";
 
 // World War II:
 // M4 Sherman
@@ -23,7 +23,7 @@ import { Tank, TankType, TankOrigin } from "../types";
 export const T28: Tank = {
   name: 'T28',
   url: 'https://en.wikipedia.org/wiki/T28_super-heavy_tank',
-  type: TankType.SuperHeavy,
+  role: TankRole.SuperHeavy,
   year: 1945,
   origin: TankOrigin.USA,
   count: 2,
@@ -36,7 +36,7 @@ export const T28: Tank = {
 export const M4: Tank = {
   name: 'M4 Sherman',
   url: 'https://en.wikipedia.org/wiki/M4_Sherman',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1941,
   origin: TankOrigin.USA,
   count: 49234,
@@ -49,7 +49,7 @@ export const M4: Tank = {
 export const M3: Tank = {
   name: 'M3 Stuart',
   url: 'https://en.wikipedia.org/wiki/M3_Stuart',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1941,
   origin: TankOrigin.USA,
   count: 22744,
@@ -62,7 +62,7 @@ export const M3: Tank = {
 export const M26: Tank = {
   name: 'M26 Pershing',
   url: 'https://en.wikipedia.org/wiki/M26_Pershing',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1944,
   origin: TankOrigin.USA,
   count: 2202,
@@ -75,7 +75,7 @@ export const M26: Tank = {
 export const M10: Tank = {
   name: 'M10 Wolverine',
   url: 'https://en.wikipedia.org/wiki/M10_tank_destroyer',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1942,
   origin: TankOrigin.USA,
   count: 6406,
@@ -88,7 +88,7 @@ export const M10: Tank = {
 export const M18: Tank = {
   name: 'M18 Hellcat',
   url: 'https://en.wikipedia.org/wiki/M18_Hellcat',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1943,
   origin: TankOrigin.USA,
   count: 2507,
@@ -101,7 +101,7 @@ export const M18: Tank = {
 export const M48: Tank = {
   name: 'M48 Patton',
   url: 'https://en.wikipedia.org/wiki/M48_Patton',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1952,
   origin: TankOrigin.USA,
   count: 12000,
@@ -114,7 +114,7 @@ export const M48: Tank = {
 export const M60: Tank = {
   name: 'M60',
   url: 'https://en.wikipedia.org/wiki/M60_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1959,
   origin: TankOrigin.USA,
   count: 15000,
@@ -127,7 +127,7 @@ export const M60: Tank = {
 export const M103: Tank = {
   name: 'M103',
   url: 'https://en.wikipedia.org/wiki/M103_heavy_tank',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1957,
   origin: TankOrigin.USA,
   count: 300,
@@ -140,7 +140,7 @@ export const M103: Tank = {
 export const M551: Tank = {
   name: 'M551 Sheridan',
   url: 'https://en.wikipedia.org/wiki/M551_Sheridan',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1966,
   origin: TankOrigin.USA,
   count: 1662,
@@ -153,7 +153,7 @@ export const M551: Tank = {
 export const M41: Tank = {
   name: 'M41 Walker Bulldog',
   url: 'https://en.wikipedia.org/wiki/M41_Walker_Bulldog',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1951,
   origin: TankOrigin.USA,
   count: 5467,
@@ -166,7 +166,7 @@ export const M41: Tank = {
 export const M1: Tank = {
   name: 'M1 Abrams',
   url: 'https://en.wikipedia.org/wiki/M1_Abrams',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1980,
   origin: TankOrigin.USA,
   count: 10300,

@@ -1,5 +1,5 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // World War II:
@@ -19,7 +19,7 @@ import { TankOrigin } from "../types";
 export const CharB1: Tank = {
   name: 'Char B1',
   url: 'https://en.wikipedia.org/wiki/Char_B1',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1935,
   origin: TankOrigin.France,
   count: 403,
@@ -32,7 +32,7 @@ export const CharB1: Tank = {
 export const RenaultR35: Tank = {
   name: 'Renault R35',
   url: 'https://en.wikipedia.org/wiki/Renault_R35',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1936,
   origin: TankOrigin.France,
   count: 1540,
@@ -45,7 +45,7 @@ export const RenaultR35: Tank = {
 export const SOMUA: Tank = {
   name: 'Somua S35',
   url: 'https://en.wikipedia.org/wiki/SOMUA_S35',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1935,
   origin: TankOrigin.France,
   count: 440,
@@ -58,7 +58,7 @@ export const SOMUA: Tank = {
 export const EBR: Tank = {
   name: 'Panhard EBR',
   url: 'https://en.wikipedia.org/wiki/Panhard_EBR',
-  type: TankType.ArmoredCar,
+  role: TankRole.ArmoredCar,
   year: 1951,
   origin: TankOrigin.France,
   count: 1179,
@@ -71,7 +71,7 @@ export const EBR: Tank = {
 export const AMX13: Tank = {
   name: 'AMX-13',
   url: 'https://en.wikipedia.org/wiki/AMX-13',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1952,
   origin: TankOrigin.France,
   count: 7700,
@@ -84,7 +84,7 @@ export const AMX13: Tank = {
 export const AMX30: Tank = {
   name: 'AMX-30',
   url: 'https://en.wikipedia.org/wiki/AMX-30',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1966,
   origin: TankOrigin.France,
   count: 3571,
@@ -97,7 +97,7 @@ export const AMX30: Tank = {
 export const AMX10: Tank = {
   name: 'AMX-10 RC',
   url: 'https://en.wikipedia.org/wiki/AMX-10_RC',
-  type: TankType.ArmoredCar,
+  role: TankRole.ArmoredCar,
   year: 1981,
   origin: TankOrigin.France,
   count: 464,
@@ -110,7 +110,7 @@ export const AMX10: Tank = {
 export const Leclerc: Tank = {
   name: 'Leclerc',
   url: 'https://en.wikipedia.org/wiki/Leclerc_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1990,
   origin: TankOrigin.France,
   count: 862,

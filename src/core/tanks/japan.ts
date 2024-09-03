@@ -1,5 +1,5 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // World War II:
@@ -19,7 +19,7 @@ import { TankOrigin } from "../types";
 export const Type95: Tank = {
   name: 'Type 95 Ha-Go',
   url: 'https://en.wikipedia.org/wiki/Type_95_Ha-Go_light_tank',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1936,
   origin: TankOrigin.Japan,
   count: 2300,
@@ -32,7 +32,7 @@ export const Type95: Tank = {
 export const Type97TeKe: Tank = {
   name: 'Type 97 Te-Ke',
   url: 'https://en.wikipedia.org/wiki/Type_97_Te-Ke_tankette',
-  type: TankType.Tankette,
+  role: TankRole.Tankette,
   year: 1939,
   origin: TankOrigin.Japan,
   count: 616,
@@ -45,7 +45,7 @@ export const Type97TeKe: Tank = {
 export const Type97ChiHa: Tank = {
   name: 'Type 97 Chi-Ha',
   url: 'https://en.wikipedia.org/wiki/Type_97_Chi-Ha_medium_tank',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1938,
   origin: TankOrigin.Japan,
   count: 1162,
@@ -58,7 +58,7 @@ export const Type97ChiHa: Tank = {
 export const Type3: Tank = {
   name: 'Type 3 Chi-Nu',
   url: 'https://en.wikipedia.org/wiki/Type_3_Chi-Nu_medium_tank',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1944,
   origin: TankOrigin.Japan,
   count: 166,
@@ -71,7 +71,7 @@ export const Type3: Tank = {
 export const Type61: Tank = {
   name: 'Type 61',
   url: 'https://en.wikipedia.org/wiki/Type_61_(tank)',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1956,
   origin: TankOrigin.Japan,
   count: 560,
@@ -84,7 +84,7 @@ export const Type61: Tank = {
 export const Type74: Tank = {
   name: 'Type 74',
   url: 'https://en.wikipedia.org/wiki/Type_74',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1975,
   origin: TankOrigin.Japan,
   count: 873,
@@ -97,7 +97,7 @@ export const Type74: Tank = {
 export const Type90: Tank = {
   name: 'Type 90',
   url: 'https://en.wikipedia.org/wiki/Type_90_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1990,
   origin: TankOrigin.Japan,
   count: 341,
@@ -110,7 +110,7 @@ export const Type90: Tank = {
 export const Type10: Tank = {
   name: 'Type 10',
   url: 'https://en.wikipedia.org/wiki/Type_10',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2010,
   origin: TankOrigin.Japan,
   count: 117,

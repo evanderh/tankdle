@@ -1,11 +1,11 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 export const Panzer61: Tank = {
   name: 'Panzer 61',
   url: 'https://en.wikipedia.org/wiki/Panzer_61',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1957,
   origin: TankOrigin.Switzerland,
   count: 150,
@@ -18,7 +18,7 @@ export const Panzer61: Tank = {
 export const Panzer68: Tank = {
   name: 'Panzer 68',
   url: 'https://en.wikipedia.org/wiki/Panzer_68',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1971,
   origin: TankOrigin.Switzerland,
   count: 390,

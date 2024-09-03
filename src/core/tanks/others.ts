@@ -1,6 +1,6 @@
 
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // Brazil: EE-T1 Osório
@@ -16,7 +16,7 @@ import { TankOrigin } from "../types";
 export const K2: Tank = {
   name: 'K2 Black Panther',
   url: 'https://en.wikipedia.org/wiki/K2_Black_Panther',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2008,
   origin: TankOrigin.SouthKorea,
   count: 260,
@@ -29,7 +29,7 @@ export const K2: Tank = {
 export const TR85: Tank = {
   name: 'TR-85',
   url: 'https://en.wikipedia.org/wiki/TR-85',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1986,
   origin: TankOrigin.Romania,
   count: 617,
@@ -42,7 +42,7 @@ export const TR85: Tank = {
 export const RamsesII: Tank = {
   name: 'Ramses II',
   url: 'https://en.wikipedia.org/wiki/Ramses_II_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2004,
   origin: TankOrigin.Egypt,
   count: 425,
@@ -55,7 +55,7 @@ export const RamsesII: Tank = {
 export const T84: Tank = {
   name: 'T-84',
   url: 'https://en.wikipedia.org/wiki/T-84',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1994,
   origin: TankOrigin.Ukraine,
   count: 425,
@@ -68,7 +68,7 @@ export const T84: Tank = {
 export const Strv103: Tank = {
   name: 'Stridsvagn 103 (S-Tank)',
   url: 'https://en.wikipedia.org/wiki/Stridsvagn_103',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1963,
   origin: TankOrigin.Sweden,
   count: 290,
@@ -81,7 +81,7 @@ export const Strv103: Tank = {
 export const BobSemple: Tank = {
   name: 'Bob Semple',
   url: 'https://en.wikipedia.org/wiki/Bob_Semple_tank',
-  type: TankType.Light,
+  role: TankRole.Light,
   year: 1940,
   origin: TankOrigin.NewZealand,
   count: 3,
@@ -94,7 +94,7 @@ export const BobSemple: Tank = {
 export const TAM: Tank = {
   name: 'Tanque Argentino Mediano',
   url: 'https://en.wikipedia.org/wiki/Tanque_Argentino_Mediano',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1979,
   origin: TankOrigin.Argentina,
   count: 280,

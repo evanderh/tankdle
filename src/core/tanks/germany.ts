@@ -1,5 +1,5 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // World War II:
@@ -24,7 +24,7 @@ import { TankOrigin } from "../types";
 export const PanzerIII: Tank = {
   name: 'Panzer III',
   url: 'https://en.wikipedia.org/wiki/Panzer_III',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1939,
   origin: TankOrigin.NaziGermany,
   count: 5774,
@@ -37,7 +37,7 @@ export const PanzerIII: Tank = {
 export const PanzerIV: Tank = {
   name: 'Panzer IV',
   url: 'https://en.wikipedia.org/wiki/Panzer_IV',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1936,
   origin: TankOrigin.NaziGermany,
   count: 8553,
@@ -50,7 +50,7 @@ export const PanzerIV: Tank = {
 export const TigerI: Tank = {
   name: 'Tiger I',
   url: 'https://en.wikipedia.org/wiki/Tiger_I',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1942,
   origin: TankOrigin.NaziGermany,
   count: 1347,
@@ -63,7 +63,7 @@ export const TigerI: Tank = {
 export const TigerII: Tank = {
   name: 'Tiger II',
   url: 'https://en.wikipedia.org/wiki/Tiger_II',
-  type: TankType.Heavy,
+  role: TankRole.Heavy,
   year: 1944,
   origin: TankOrigin.NaziGermany,
   count: 492,
@@ -76,7 +76,7 @@ export const TigerII: Tank = {
 export const Panther: Tank = {
   name: 'Panther',
   url: 'https://en.wikipedia.org/wiki/Panther_tank',
-  type: TankType.Medium,
+  role: TankRole.Medium,
   year: 1943,
   origin: TankOrigin.NaziGermany,
   count: 6000,
@@ -89,7 +89,7 @@ export const Panther: Tank = {
 export const StuGIII: Tank = {
   name: 'StuG III',
   url: 'https://en.wikipedia.org/wiki/Sturmgesch%C3%BCtz_III',
-  type: TankType.AssaultGun,
+  role: TankRole.AssaultGun,
   year: 1940,
   origin: TankOrigin.NaziGermany,
   count: 11386,
@@ -102,7 +102,7 @@ export const StuGIII: Tank = {
 export const Jagdpanther: Tank = {
   name: 'Jagdpanther',
   url: 'https://en.wikipedia.org/wiki/Jagdpanther',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1943,
   origin: TankOrigin.NaziGermany,
   count: 413,
@@ -115,7 +115,7 @@ export const Jagdpanther: Tank = {
 export const Elefant: Tank = {
   name: 'Elefant',
   url: 'https://en.wikipedia.org/wiki/Elefant',
-  type: TankType.TankDestroyer,
+  role: TankRole.TankDestroyer,
   year: 1943,
   origin: TankOrigin.NaziGermany,
   count: 91,
@@ -128,7 +128,7 @@ export const Elefant: Tank = {
 export const Maus: Tank = {
   name: 'Panzer VIII Maus',
   url: 'https://en.wikipedia.org/wiki/Panzer_VIII_Maus',
-  type: TankType.SuperHeavy,
+  role: TankRole.SuperHeavy,
   year: 1944,
   origin: TankOrigin.NaziGermany,
   count: 2,
@@ -141,7 +141,7 @@ export const Maus: Tank = {
 export const Leopard1: Tank = {
   name: 'Leopard 1',
   url: 'https://en.wikipedia.org/wiki/Leopard_1',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1961,
   origin: TankOrigin.WestGermany,
   count: 4744,
@@ -154,7 +154,7 @@ export const Leopard1: Tank = {
 export const Leopard2: Tank = {
   name: 'Leopard 2',
   url: 'https://en.wikipedia.org/wiki/Leopard_2',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1979,
   origin: TankOrigin.WestGermany,
   count: 3600,

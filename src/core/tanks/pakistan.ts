@@ -1,11 +1,11 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 export const AlZarrar: Tank = {
   name: 'Al-Zarrar',
   url: 'https://en.wikipedia.org/wiki/Al-Zarrar_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2003,
   origin: TankOrigin.Pakistan,
   count: 750,
@@ -18,7 +18,7 @@ export const AlZarrar: Tank = {
 export const AlKhalid: Tank = {
   name: 'Al-Khalid',
   url: 'https://en.wikipedia.org/wiki/Al-Khalid/VT-1A',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2001,
   origin: TankOrigin.Pakistan,
   count: 1144,

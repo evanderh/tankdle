@@ -1,9 +1,9 @@
-import { Tank, TankType, TankOrigin  } from "../types";
+import { Tank, TankRole, TankOrigin  } from "../types";
 
 export const K1: Tank = {
   name: 'K1 (Type 88)',
   url: 'https://en.wikipedia.org/wiki/K1_tank',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1985,
   origin: TankOrigin.SouthAfrica,
   count: 1027,
@@ -16,7 +16,7 @@ export const K1: Tank = {
 export const Olifant: Tank = {
   name: 'Olifant',
   url: 'https://en.wikipedia.org/wiki/Olifant_(tank)',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1974,
   origin: TankOrigin.SouthAfrica,
   count: 224,

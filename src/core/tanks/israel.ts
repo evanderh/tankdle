@@ -1,5 +1,5 @@
 import { Tank } from "../types";
-import { TankType } from "../types";
+import { TankRole } from "../types";
 import { TankOrigin } from "../types";
 
 // Cold War:
@@ -13,7 +13,7 @@ import { TankOrigin } from "../types";
 export const MerkavaMark1: Tank = {
   name: 'Merkava Mark I',
   url: 'https://en.wikipedia.org/wiki/Merkava',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1979,
   origin: TankOrigin.Israel,
   count: 250,
@@ -26,7 +26,7 @@ export const MerkavaMark1: Tank = {
 export const MerkavaMark2: Tank = {
   name: 'Merkava Mark II',
   url: 'https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_2',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1983,
   origin: TankOrigin.Israel,
   count: 580,
@@ -39,7 +39,7 @@ export const MerkavaMark2: Tank = {
 export const MerkavaMark3: Tank = {
   name: 'Merkava III',
   url: 'https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_3',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 1989,
   origin: TankOrigin.Israel,
   count: 780,
@@ -52,7 +52,7 @@ export const MerkavaMark3: Tank = {
 export const MerkavaMark4: Tank = {
   name: 'Merkava IV',
   url: 'https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_4',
-  type: TankType.MBT,
+  role: TankRole.MBT,
   year: 2003,
   origin: TankOrigin.Israel,
   count: 360,

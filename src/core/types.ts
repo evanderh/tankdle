@@ -27,23 +27,28 @@ export enum TankOrigin {
   India = 'India'
 };
 
-export enum TankType {
+export enum TankRole {
   Tankette = 'Tankette',
   Light = 'Light Tank',
   Medium = 'Medium Tank',
   Heavy = 'Heavy Tank',
   SuperHeavy = 'Super Heavy',
-  MBT = 'MBT',
+  MBT = 'Main Battle Tank',
   TankDestroyer = 'Tank Destroyer',
-  SPG = 'SPG',
+  SPG = 'Self-Propelled Gun',
   AssaultGun = 'Assault Gun',
   ArmoredCar = 'Armored Car',
+  IFV = 'Infantry Fighting Vehicle',
+  APC = 'Armored Personnel Carrier',
+  SPAAG = 'Self-Propelled Anti-Aircraft Gun',
+  ReconnaissanceVehicle = 'Reconnaissance Vehicle',
+  FlameTank = 'Flame Tank',
 };
 
 export type Tank = {
   name: string;             // tank name
   url: string;              // link to wikipedia
-  type: TankType;           // type of tank
+  role: TankRole;           // type of tank
   year: number;             // year first built
   origin: TankOrigin;       // country of origin
   count: number;            // number of tanks built
