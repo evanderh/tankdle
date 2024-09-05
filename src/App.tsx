@@ -5,6 +5,7 @@ import { createTheme } from '@mui/material/styles';
 import Home from './pages/Home';
 import Tanks from './pages/Tanks';
 import { useEffect, useState } from 'react';
+import Header from './components/Header';
 
 const getTheme = (mode: 'dark' | 'light') =>
   createTheme({
@@ -41,8 +42,8 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Header /> 
       <Container fixed maxWidth='xl'>
-        <h1>Tankdle</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tanks" element={<Tanks />} />
