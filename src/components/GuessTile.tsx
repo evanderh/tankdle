@@ -28,14 +28,21 @@ function renderHeader(field: keyof(Tank)) {
 
 function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
   const sx = {
-    fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
+    fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem', lg: '2rem' },
     fontWeight: 'bold',
   };
-  const lh = { lineHeight: { xs: '1.5rem', md: '2rem' } };
 
   switch (field) {
     case 'role':
-      return <Typography sx={{ ...sx, ...lh }}>{guess[field]}</Typography>;
+      return (
+        <Typography sx={{
+          ...sx,
+          lineHeight: { xs: '1.3rem', sm: '1.6rem', md: '2rem' },
+        }}>
+          {guess[field]}
+        </Typography>
+      );
+
 
     case 'origin':
       return <img
@@ -136,7 +143,7 @@ const GuessTile = ({ field, guess, correct }: Props) => {
     <Grid2 size={{ xs: 6, md: 3 }}>
       <Paper
         sx={{
-          height: { xs: '64px', sm: '64px', md: '80px' },
+          height: { xs: '72px', sm: '80px', md: '96px', lg: '120px' },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

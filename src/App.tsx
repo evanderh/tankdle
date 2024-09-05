@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline, Container, useMediaQuery } from '@mui/material';
+import { ThemeProvider, CssBaseline, Container  } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 import Home from './pages/Home';
@@ -37,12 +37,11 @@ const App = () => {
   });
 
   const theme = getTheme(mode);
-  const isMedium = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth={isMedium ? "md" : 'sm'}>
+      <Container fixed maxWidth='xl'>
         <h1>Tankdle</h1>
         <Routes>
           <Route path="/" element={<Home />} />

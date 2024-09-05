@@ -42,14 +42,14 @@ export enum TankRole {
   Heavy = 'Heavy Tank',
   SuperHeavy = 'Super Heavy',
   MBT = 'Main Battle Tank',
-  TankDestroyer = 'Tank Destroyer',
-  SPG = 'Self-Propelled Gun',
+  TankDestroyer = 'TD',
+  SPG = 'SPG',
   AssaultGun = 'Assault Gun',
   ArmoredCar = 'Armored Car',
-  IFV = 'Infantry Fighting Vehicle',
-  APC = 'Armored Personnel Carrier',
-  SPAAG = 'Self-Propelled Anti-Aircraft Gun',
-  ReconnaissanceVehicle = 'Reconnaissance Vehicle',
+  IFV = 'IFV',
+  APC = 'APC',
+  SPAAG = 'SPAAG',
+  ReconnaissanceVehicle = 'Recon Vehicle',
   FlameTank = 'Flame Tank',
 };
 
@@ -62,8 +62,8 @@ export type Tank = {
   count: number;            // number of tanks built
   mass: number;             // tons
   engine: number;           // horsepower
-  range: { km: number, mi: number };  // [km, mi]
-  speed: { km: number, mi: number };  // [km, mi]
+  range: { km: number, mi: number };  // { km, mi }
+  speed: { km: number, mi: number };  // { km, mi }
 };
 
 export type TankImage = {
