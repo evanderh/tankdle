@@ -42,8 +42,8 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header /> 
-      <Container fixed maxWidth='xl'>
+      <Container fixed maxWidth='sm'>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tanks" element={<Tanks />} />

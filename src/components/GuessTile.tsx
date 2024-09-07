@@ -10,10 +10,10 @@ function renderHeader(field: keyof(Tank)) {
       return 'Produced:';
 
     case 'mass':
-      return 'Tons:';
+      return 'Mass:';
 
     case 'engine':
-      return 'Horsepower:';
+      return 'Engine:';
 
     case 'range':
       return 'Op. Range:'
@@ -28,7 +28,7 @@ function renderHeader(field: keyof(Tank)) {
 
 function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
   const sx = {
-    fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem', lg: '2rem' },
+    fontSize: { xs: '1.2rem', sm: '1.4rem' },
     fontWeight: 'bold',
   };
 
@@ -37,12 +37,11 @@ function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
       return (
         <Typography sx={{
           ...sx,
-          lineHeight: { xs: '1.3rem', sm: '1.6rem', md: '2rem' },
+          lineHeight: { xs: '1.3rem', sm: '1.6rem' },
         }}>
           {guess[field]}
         </Typography>
       );
-
 
     case 'origin':
       return <img
@@ -52,11 +51,17 @@ function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
         style={{ border: `1px solid ${isDarkMode ? 'white' : 'black'}` }}
       />;
 
+    case 'mass':
+      return <Typography sx={sx}>{guess[field]} t</Typography>;
+
+    case 'engine':
+      return <Typography sx={sx}>{guess[field]} hp</Typography>;
+
     case 'range':
       return <Typography sx={sx}>{guess[field].mi} mi</Typography>;
 
     case 'speed':
-      return <Typography sx={sx}>{guess[field].mi} mi/h</Typography>;
+      return <Typography sx={sx}>{guess[field].mi} mph</Typography>;
 
     default:
       return <Typography sx={sx}>{guess[field]}</Typography>;
@@ -64,7 +69,7 @@ function renderField(guess: Tank, field: keyof(Tank), isDarkMode: boolean) {
 }
 
 function renderIndicator(guess: Tank, correct: Tank, field: keyof(Tank)) {
-  const sx = { marginLeft: '8px' };
+  const sx = { marginLeft: '2px' };
 
   switch (field) {
     case 'year':
@@ -140,10 +145,10 @@ const GuessTile = ({ field, guess, correct }: Props) => {
   }
 
   return (
-    <Grid2 size={{ xs: 6, md: 3 }}>
+    <Grid2 size={{ xs: 6, sm: 3 }}>
       <Paper
         sx={{
-          height: { xs: '72px', sm: '80px', md: '96px', lg: '120px' },
+          height: '72px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

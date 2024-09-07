@@ -41,7 +41,7 @@ export enum TankRole {
   Medium = 'Medium Tank',
   Heavy = 'Heavy Tank',
   SuperHeavy = 'Super Heavy',
-  MBT = 'Main Battle Tank',
+  MBT = 'MBT',
   TankDestroyer = 'TD',
   SPG = 'SPG',
   AssaultGun = 'Assault Gun',
