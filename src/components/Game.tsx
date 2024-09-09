@@ -45,8 +45,6 @@ const Game = ({ tankImage }: Props) => {
           The answer was:
           {' '}
           <a href={tankImage.tank.url}>{tankImage.tank.name}</a>
-          {'. '}
-          <MuiLink to="/tanks" component={RouterLink}>Play any tank</MuiLink>
         </h4>
       }
 

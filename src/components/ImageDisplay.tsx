@@ -12,14 +12,17 @@ const ImageDisplay = ({ imageUrl, attribution, status }: Props) => {
       <img
         style={{
           maxWidth: '100%',
-          maxHeight: '50vh',
+          maxHeight: '40vh',
           objectFit: 'contain',
         }}
         src={imageUrl}
         alt="Tank of the day"
       />
       {attribution && status !== 'playing' && (
-        <p dangerouslySetInnerHTML={{ __html: attribution }} />
+        <p
+          style={{ fontSize: '0.75rem' }}
+          dangerouslySetInnerHTML={{ __html: attribution }}
+        />
       )}
     </>
   );
