@@ -1,7 +1,18 @@
 import { Grid2, Paper, Typography, useMediaQuery } from "@mui/material";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Tank } from "../core/types";
-import GuessTileBody from "./GuessTileBody";
 import { countryCode } from "../core/tanks";
+
+function getFieldValue(tank: Tank, field: keyof(Tank)) {
+  switch (field) {
+    case 'range':
+    case 'speed':
+      return tank[field].mi;
+    default:
+      return tank[field];
+  }
+}
 
 function getTileLabel(field: keyof(Tank)) {
   switch (field) {
@@ -17,6 +28,29 @@ function getTileLabel(field: keyof(Tank)) {
       return 'Top Speed:';
     default:
       return '';
+  }
+}
+
+function getFieldUnits(field: keyof Tank) {
+  switch (field) {
+    case 'mass':
+      return ' t';
+    case 'engine':
+      return ' hp';
+    case 'range':
+      return ' mi';
+    case 'speed':
+      return ' mph';
+    default:
+      return '';
+  }
+}
+
+function getIndicator<T>(guessValue: T, correctValue: T) {
+  if (guessValue > correctValue) {
+    return <KeyboardArrowDownIcon sx={{ verticalAlign: 'middle' }} />;
+  } else if (guessValue < correctValue) {
+    return <KeyboardArrowUpIcon sx={{ verticalAlign: 'middle' }} />;
   }
 }
 
@@ -47,9 +81,11 @@ interface Props {
 
 const GuessTile = ({ field, guess, correct }: Props) => {
   const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const guessValue = getFieldValue(guess, field);
+  const correctValue = getFieldValue(correct, field);
 
   let backgroundColor = 'default';
-  if (guess[field] === correct[field]) {
+  if (guessValue === correctValue) {
     backgroundColor = '#385';
   } else if (isCloseGuess(guess, correct, field)) {
     backgroundColor = '#ba2';
@@ -59,7 +95,7 @@ const GuessTile = ({ field, guess, correct }: Props) => {
     <Grid2 size={{ xs: 6, sm: 3 }}>
       <Paper
         sx={{
-          height: { xs: '56px', sm: '72px' },
+          height: { xs: '64px', sm: '72px' },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -76,17 +112,25 @@ const GuessTile = ({ field, guess, correct }: Props) => {
           field === 'origin'
           ?
           <img
-            src={`flags/${countryCode[guess[field]]}.png`}
+            src={`flags/${countryCode[guess['origin']]}.png`}
             height="48"
-            alt={guess[field]}
+            alt={guess['origin']}
             style={{ border: `1px solid ${isDarkMode ? 'white' : 'black'}` }}
           />
           :
-          <GuessTileBody
-            field={field}
-            guess={guess}
-            correct={correct}
-          />
+          <Typography
+            sx={{
+              fontSize: { xs: '1.2rem', sm: '1.4rem' },
+              lineHeight: { xs: '1.2rem', sm: '1.4rem' },
+              fontWeight: 'bold',
+            }}
+          >
+            {guessValue}
+            {getFieldUnits(field)}
+            {['year', 'count', 'mass', 'engine', 'range', 'speed'].includes(field) &&
+              getIndicator(guessValue, correctValue)
+            }
+          </Typography>
         }
       </Paper>
     </Grid2>
