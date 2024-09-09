@@ -2,7 +2,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link as MuiLink } from '@mui/material';
 import { tankImages } from '../core/tanks';
 
-const Tanks = () => {
+const Archive = () => {
   return (
     <div>
       <h3>Play any tank</h3>
@@ -20,4 +20,4 @@ const Tanks = () => {
   );
 };
 
-export default Tanks;
+export default Archive;

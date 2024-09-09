@@ -3,7 +3,7 @@ import { ThemeProvider, CssBaseline, Container  } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 import Home from './pages/Home';
-import Tanks from './pages/Tanks';
+import Archive from './pages/Archive';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 
@@ -46,7 +46,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tanks" element={<Tanks />} />
+          <Route path="/archive" element={<Archive />} />
         </Routes>
       </Container>
     </ThemeProvider>

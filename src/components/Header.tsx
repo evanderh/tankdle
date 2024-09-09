@@ -33,11 +33,11 @@ const Header = () => {
 
       <div style={{ flexGrow: 1 }}></div>
 
-      <IconButton color="inherit" component={Link} to="/calendar">
-        <CalendarTodayIcon />
-      </IconButton>
-      <IconButton color="inherit" component={Link} to="/home">
+      <IconButton color="inherit" component={Link} to="/">
         <HomeIcon />
+      </IconButton>
+      <IconButton color="inherit" component={Link} to="/archive">
+        <CalendarTodayIcon />
       </IconButton>
       <IconButton color="inherit" component={Link} to="/stats">
         <BarChartIcon />
