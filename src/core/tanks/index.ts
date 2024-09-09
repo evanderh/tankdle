@@ -32,6 +32,41 @@ export const tankImages: TankImage[] = [
     url: 'tanks/tank4.jpg',
     attribution: 'Attribution, <a href="https://commons.wikimedia.org/w/index.php?curid=712156">Link</a>',
   },
+  {
+    tank: uk.Centurion,
+    url: 'tanks/1024px-Centurion_Tank_outside_the_Redoubt_Fortress.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Centurion_Tank_outside_the_Redoubt_Fortress.jpg">en:User:Ksimisk</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: japan.Type90,
+    url: 'tanks/1024px-Type_90_Prototype_(JGSDF_Public_Information_Center).jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_90_Prototype_(JGSDF_Public_Information_Center).jpg">KyūMaruOtami</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: germany.Panther,
+    url: 'tanks/Bundesarchiv_Bild_101I-696-0432-13,_Polen,_Panzer_V__Panther__auf_dem_Feld.2.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-696-0432-13,_Polen,_Panzer_V_%22Panther%22_auf_dem_Feld.2.jpg">Bundesarchiv, Bild 101I-696-0432-13 / Mahns / CC-BY-SA 3.0</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">CC BY-SA 3.0 DE</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M3Lee,
+    url: 'tanks/1024px-AlfredPalmerM3tank1942b_crop2.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:AlfredPalmerM3tank1942b_crop2.jpg">Alfred T. Palmer</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: others.Strv103,
+    url: 'tanks/1024px-Stridsvagn_103_Revinge_2013-3.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Stridsvagn_103_Revinge_2013-3.jpg">Jorchr</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: russia.T54,
+    url: 'tanks/1024px-T-54A_Panzermuseum_Thun.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:T-54A_Panzermuseum_Thun.jpg">Sandstein</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M2Bradley,
+    url: 'tanks/1024px-M2_Bradley_Reforger_1985.jpeg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M2_Bradley_Reforger_1985.JPEG">See page for author</a>, Public domain, via Wikimedia Commons',
+  },
 ];
 
 export const tanks: Tank[] = [
