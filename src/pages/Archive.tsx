@@ -6,16 +6,19 @@ const Archive = () => {
   return (
     <div>
       <h3>Play any tank</h3>
+      <ul>
       {
         tankImages.map((tankImage, ix) => (
-          <MuiLink
-            component={RouterLink}
-            to={`/?tank=${ix+1}`}
-            key={tankImage.tank.name}
-            style={{ margin: '1rem' }}
-          >{ix+1}</MuiLink>
+          <li key={tankImage.tank.name}>
+            <MuiLink
+              component={RouterLink}
+              to={`/?tank=${ix+1}`}
+              style={{ margin: '1rem' }}
+            >{ix+1}</MuiLink>
+          </li>
         ))
       }
+      </ul>
     </div>
   );
 };
