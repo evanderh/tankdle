@@ -116,7 +116,7 @@ const Header = () => {
           </Typography>
           <ul>
             <li>
-              New tanks daily, check the <Link to="/archive">archive</Link> to play previous tanks/days.
+              New tanks daily at midnight, check the <Link to="/archive">archive</Link> to play previous tanks/days.
             </li>
             <li>
               I know, I know... not everything in Tankdle is technically a tank.

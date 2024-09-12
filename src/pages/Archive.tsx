@@ -1,25 +1,47 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as MuiLink } from '@mui/material';
-import { tankImages } from '../core/tanks';
+import { Grid2, Link as MuiLink, Paper, Typography } from '@mui/material';
+import { tankImages, startDate } from '../core/tanks';
+
+function addDays(date: Date, days: number): Date {
+  const result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
 
 const Archive = () => {
   return (
-    <div>
-      <h3>Play any tank</h3>
-      <ul style={{  listStyle: 'none' }}>
-      {
-        tankImages.map((tankImage, ix) => (
-          <li key={tankImage.tank.name}>
+    <>
+      <Typography variant='h6' sx={{ margin: '1rem' }}>
+        Archive
+      </Typography>
+      <Grid2 container spacing={2}>
+      {tankImages.map((tankImage, ix) => (
+        <Grid2
+          size={{ xs: 4, sm: 3 }}
+          key={tankImage.tank.name}
+        >
+          <Paper
+            sx={{
+              paddingY: '1em',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+            elevation={12}
+          >
             <MuiLink
               component={RouterLink}
               to={`/?tank=${ix+1}`}
-              style={{ margin: '1rem' }}
-            >{ix+1}</MuiLink>
-          </li>
-        ))
-      }
-      </ul>
-    </div>
+            >
+              {addDays(startDate, ix).toLocaleDateString()}
+            </MuiLink>
+          </Paper>
+        </Grid2>
+      ))}
+      </Grid2>
+    </>
   );
 };
 

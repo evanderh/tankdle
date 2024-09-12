@@ -102,7 +102,8 @@ export const tanks: Tank[] = [
   others,
 ].flatMap(c => Object.values(c));
 
-const utcStart = Date.UTC(2024, 8, 1);  // 2024-09-01
+export const startDate = new Date('2024-09-01');
+
 export const getTankImage = (index: string | null): TankImage => {
   if (index) {
     const ix = Number(index) - 1;
@@ -112,10 +113,8 @@ export const getTankImage = (index: string | null): TankImage => {
   }
 
   const today = new Date();
-  const utcToday = Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate());
-
-  const diffTime = utcToday - utcStart;
-  const daysSince = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  const timeSince = today.getTime() - startDate.getTime();
+  const daysSince = Math.floor(timeSince / (1000 * 60 * 60 * 24));
   return tankImages[daysSince % tankImages.length];
 };
 
