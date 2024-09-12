@@ -42,11 +42,7 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-Type_90_Prototype_(JGSDF_Public_Information_Center).jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_90_Prototype_(JGSDF_Public_Information_Center).jpg">KyūMaruOtami</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
   },
-  {
-    tank: germany.Panther,
-    url: 'tanks/Bundesarchiv_Bild_101I-696-0432-13,_Polen,_Panzer_V__Panther__auf_dem_Feld.2.jpg',
-    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-696-0432-13,_Polen,_Panzer_V_%22Panther%22_auf_dem_Feld.2.jpg">Bundesarchiv, Bild 101I-696-0432-13 / Mahns / CC-BY-SA 3.0</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">CC BY-SA 3.0 DE</a>, via Wikimedia Commons',
-  },
+  
   {
     tank: usa.M3Lee,
     url: 'tanks/1024px-AlfredPalmerM3tank1942b_crop2.jpg',
@@ -73,20 +69,25 @@ export const tankImages: TankImage[] = [
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:TankshermanM4.jpg">BonesBrigade at English Wikipedia</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
   },
   {
-    tank: japan.Type95HaGo,
-    url: 'tanks/1024px-Type_95_light_tank_Tarawa_cropped_1943_127-gr-18-128-64077_001-ac.jpg',
-    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_95_light_tank_Tarawa_cropped_1943_127-gr-18-128-64077_001-ac.jpg">National Archives and Records Administration</a>, Public domain, via Wikimedia Commons',
-  },
-  {
     tank: usa.T28,
     url: 'tanks/1024px-T28_Aberdeen_1946.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:T28_Aberdeen_1946.jpg">US Army Signal Corps (watermark)</a>, Public domain, via Wikimedia Commons',
   },
   {
+    tank: japan.Type95HaGo,
+    url: 'tanks/1024px-Type_95_light_tank_Tarawa_cropped_1943_127-gr-18-128-64077_001-ac.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_95_light_tank_Tarawa_cropped_1943_127-gr-18-128-64077_001-ac.jpg">National Archives and Records Administration</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M41,
+    url: 'tanks/1024px-M41_Bulldog_Fort_Meade.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M41_Bulldog_Fort_Meade.jpg">Wilson44691</a>, CC0, via Wikimedia Commons'
+  },
+  {
     tank: china.Type80_88,
     url: 'tanks/1024px-Type_88_tanks_01.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_88_tanks_01.jpg">Mil.ru</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons',
-  }
+  },
 ];
 
 export const tanks: Tank[] = [
