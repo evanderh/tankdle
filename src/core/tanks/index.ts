@@ -9,7 +9,7 @@ import * as italy from './italy';
 import * as japan from "./japan";
 import * as others from "./others";
 
-import { Tank, TankImage, TankOrigin } from "../types";
+import { Continent, Tank, TankImage, TankOrigin } from "../types";
 
 export const tankImages: TankImage[] = [
   {
@@ -118,6 +118,46 @@ export const getTankImage = (index: string | null): TankImage => {
   const daysSince = Math.floor(diffTime / (1000 * 60 * 60 * 24));
   return tankImages[daysSince % tankImages.length];
 };
+
+export const continentCode: {
+  [key in TankOrigin]: Continent;
+} = {
+  [TankOrigin.Australia]: Continent.OC,
+  [TankOrigin.Argentina]: Continent.SA,
+  [TankOrigin.Brazil]: Continent.SA,
+  [TankOrigin.Canada]: Continent.NA,
+  [TankOrigin.China]: Continent.AS,
+  [TankOrigin.Czech]: Continent.EU,
+  [TankOrigin.Egypt]: Continent.AF,
+  [TankOrigin.France]: Continent.EU,
+  [TankOrigin.Germany]: Continent.EU,
+  [TankOrigin.Hungary]: Continent.EU,
+  [TankOrigin.India]: Continent.AS,
+  [TankOrigin.Iran]: Continent.AS,
+  [TankOrigin.Israel]: Continent.AS,
+  [TankOrigin.Italy]: Continent.EU,
+  [TankOrigin.Japan]: Continent.AS,
+  [TankOrigin.NaziGermany]: Continent.EU,
+  [TankOrigin.NewZealand]: Continent.OC,
+  [TankOrigin.NorthKorea]: Continent.AS,
+  [TankOrigin.Pakistan]: Continent.AS,
+  [TankOrigin.Poland]: Continent.EU,
+  [TankOrigin.Romania]: Continent.EU,
+  [TankOrigin.Russia]: Continent.EU,
+  [TankOrigin.SouthAfrica]: Continent.AF,
+  [TankOrigin.SouthKorea]: Continent.AS,
+  [TankOrigin.Soviet]: Continent.EU,
+  [TankOrigin.Sweden]: Continent.EU,
+  [TankOrigin.Switzerland]: Continent.EU,
+  [TankOrigin.Taiwan]: Continent.AS,
+  [TankOrigin.Turkey]: Continent.AS,
+  [TankOrigin.UK]: Continent.EU,
+  [TankOrigin.Ukraine]: Continent.EU,
+  [TankOrigin.USA]: Continent.NA,
+  [TankOrigin.WestGermany]: Continent.EU,
+  [TankOrigin.Yugoslavia]: Continent.EU,
+};
+
 
 export const countryCode: {
   [key in TankOrigin]: string;

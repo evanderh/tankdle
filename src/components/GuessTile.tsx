@@ -2,7 +2,7 @@ import { Grid2, Paper, Typography, useMediaQuery } from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Tank } from "../core/types";
-import { countryCode } from "../core/tanks";
+import { continentCode, countryCode } from "../core/tanks";
 
 function getFieldValue(tank: Tank, field: keyof(Tank)) {
   switch (field) {
@@ -58,6 +58,8 @@ function isCloseGuess(guess: Tank, correct: Tank, field: keyof(Tank)) {
   switch (field) {
     case 'year': // within 10 years
       return Math.abs(guess.year - correct.year) <= 10;
+    case 'origin': // same continent
+      return continentCode[guess[field]] == continentCode[correct[field]];
     case 'count': // within 20%
       return Math.abs(guess[field] - correct[field]) <= (correct[field] * 0.2);
     case 'mass': // within 20%

@@ -71,3 +71,12 @@ export type TankImage = {
   url: string;
   attribution?: string;
 };
+
+export enum Continent {
+  AF,
+  AS,
+  EU,
+  NA,
+  OC,
+  SA,
+};
