@@ -6,7 +6,7 @@ const Archive = () => {
   return (
     <div>
       <h3>Play any tank</h3>
-      <ul>
+      <ul style={{  listStyle: 'none' }}>
       {
         tankImages.map((tankImage, ix) => (
           <li key={tankImage.tank.name}>

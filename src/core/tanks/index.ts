@@ -67,6 +67,26 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-M2_Bradley_Reforger_1985.jpeg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:M2_Bradley_Reforger_1985.JPEG">See page for author</a>, Public domain, via Wikimedia Commons',
   },
+  {
+    tank: usa.M4,
+    url: 'tanks/1024px-TankshermanM4.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:TankshermanM4.jpg">BonesBrigade at English Wikipedia</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: japan.Type95HaGo,
+    url: 'tanks/1024px-Type_95_light_tank_Tarawa_cropped_1943_127-gr-18-128-64077_001-ac.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_95_light_tank_Tarawa_cropped_1943_127-gr-18-128-64077_001-ac.jpg">National Archives and Records Administration</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: usa.T28,
+    url: 'tanks/1024px-T28_Aberdeen_1946.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:T28_Aberdeen_1946.jpg">US Army Signal Corps (watermark)</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: china.Type80_88,
+    url: 'tanks/1024px-Type_88_tanks_01.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_88_tanks_01.jpg">Mil.ru</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons',
+  }
 ];
 
 export const tanks: Tank[] = [
