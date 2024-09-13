@@ -273,7 +273,6 @@ export const M1117Guardian: Tank = {
   speed: { km: 100, mi: 62 },
 };
 
-
 export const Stryker: Tank = {
   name: 'Stryker',
   url: 'https://en.wikipedia.org/wiki/Stryker',
@@ -285,4 +284,17 @@ export const Stryker: Tank = {
   engine: 350,
   range: { km: 500, mi: 310 },
   speed: { km: 97, mi: 60 },
+};
+
+export const Killdozer: Tank = {
+  name: 'Killdozer',
+  url: 'https://en.wikipedia.org/wiki/Marvin_Heemeyer#The_bulldozer',
+  role: TankRole.SuperHeavy,
+  year: 2004,
+  origin: TankOrigin.USA,
+  count: 1,
+  mass: 18,
+  engine: 410,
+  range: { km: 240, mi: 150 },
+  speed: { km: 12, mi: 8 },
 };
