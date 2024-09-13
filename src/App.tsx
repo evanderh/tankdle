@@ -4,7 +4,6 @@ import { createTheme } from '@mui/material/styles';
 
 import Archive from './pages/Archive';
 import { useEffect, useState } from 'react';
-import Header from './components/Header';
 import Game from './pages/Game';
 
 const getTheme = (mode: 'dark' | 'light') =>

@@ -10,6 +10,7 @@ import Header from '../components/Header';
 
 export const maxGuesses = 6;
 export enum GameStatus { playing, win, loss };
+
 function getStatus(guesses: string[], tankImage: TankImage) {
   if (guesses[guesses.length-1] === tankImage.tank.name) {
     return GameStatus.win;
@@ -19,20 +20,29 @@ function getStatus(guesses: string[], tankImage: TankImage) {
   return GameStatus.playing;
 }
 
+function getGuesses(key: string) {
+  return JSON.parse(localStorage.getItem(key) || '[]') as string[];
+}
+
 const Game = () => {
   const [searchParams, ] = useSearchParams();
-  const tankImage = getTankImage(searchParams.get('tank'));
+  const tankNumber = searchParams.get('tank');
+  const guessesKey = `tank_guesses_${tankNumber}`;
 
-  const store = JSON.parse(localStorage.getItem('guesses') || '[]')
-  const [guesses, setGuesses] = useState<string[]>(store);
+  const tankImage = getTankImage(tankNumber);
+  const [guesses, setGuesses] = useState<string[]>(getGuesses(guessesKey));
   const [status, setStatus] = useState<GameStatus>(getStatus(guesses, tankImage));
 
   const handleGuessSubmit = (guess: string) => setGuesses([...guesses, guess]);
   const clearGuesses = () => setGuesses([]);
 
   useEffect(() => {
+    setGuesses(getGuesses(guessesKey))
+  }, [guessesKey]);
+
+  useEffect(() => {
     setStatus(getStatus(guesses, tankImage));
-    localStorage.setItem('guesses', JSON.stringify(guesses))
+    localStorage.setItem(guessesKey, JSON.stringify(guesses))
   }, [guesses]);
 
   return (

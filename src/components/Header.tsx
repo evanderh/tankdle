@@ -17,6 +17,7 @@ const boxSx: SxProps = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  textAlign: 'center'
 };
 
 interface Props {
@@ -98,7 +99,7 @@ const Header = ({ clearGuesses }: Props) => {
           <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
             How to play
           </Typography>
-          <ul>
+          <ul style={{ textAlign: 'left' }}>
             <li>
               Use the image to guess the name of the tank.
               <img
@@ -122,7 +123,7 @@ const Header = ({ clearGuesses }: Props) => {
           <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
              About
           </Typography>
-          <ul>
+          <ul style={{ textAlign: 'left' }}>
             <li>
               New tanks daily at midnight, check the <Link to="/archive">archive</Link> to play previous tanks/days.
             </li>
@@ -132,7 +133,14 @@ const Header = ({ clearGuesses }: Props) => {
               more fun and challenging to use a variety of vehicles.
             </li>
           </ul>
-          <Button onClick={clearStorage}>Clear storage</Button>
+
+          <Button
+            variant='contained'
+            onClick={clearStorage}
+            sx={{ margin: '1em' }}
+          >
+            Clear storage
+          </Button>
         </Box>
       </Modal>
 
