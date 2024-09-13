@@ -4,10 +4,11 @@ import HomeIcon from '@mui/icons-material/Home';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { Box, IconButton, Modal, Stack, SxProps, Typography } from '@mui/material';
+import { Box, Grid2, IconButton, Modal, Paper, Stack, SxProps, Typography } from '@mui/material';
 import { useState } from 'react';
+import { getGamesPlayed, getGamesWon } from '../core/game';
 
-const boxSx: SxProps = {
+const modalSx: SxProps = {
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -18,6 +19,14 @@ const boxSx: SxProps = {
   boxShadow: 24,
   p: 4,
   textAlign: 'center'
+};
+
+const statsTileSx: SxProps = {
+  height: '64px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 };
 
 interface Props {
@@ -35,6 +44,8 @@ const Header = ({ clearGuesses }: Props) => {
     clearGuesses && clearGuesses();
     localStorage.clear();
   }
+  const played = getGamesPlayed();
+  const wins = getGamesWon();
 
   return (
     <Stack
@@ -78,10 +89,45 @@ const Header = ({ clearGuesses }: Props) => {
         open={statsIsOpen}
         onClose={statsClose}
       >
-        <Box sx={boxSx}>
-          <Typography variant="h6" component="h2">
-            Text in a modal
+        <Box sx={modalSx}>
+          <Typography variant="h4" component="h2">
+            Your Stats
           </Typography>
+          <Grid2 container spacing={4}>
+            <Grid2 size={4}>
+              <Paper elevation={12} sx={statsTileSx}>
+                <div>Wins</div>
+                <div>{wins}</div>
+              </Paper>
+            </Grid2>
+            <Grid2 size={4}>
+              <Paper elevation={12} sx={statsTileSx}>
+                <div>Losses</div>
+                <div>{played - wins}</div>
+              </Paper>
+            </Grid2>
+            <Grid2 size={4}>
+              <Paper elevation={12} sx={statsTileSx}>
+                <div>Win Rate</div>
+                <div>{(wins / played)
+                  ? `${(wins / played * 100).toFixed(0)}%`
+                  : '-'
+                }</div>
+              </Paper>
+            </Grid2>
+            <Grid2 size={6}>
+              <Paper elevation={12} sx={statsTileSx}>
+                <div>Day Streak</div>
+                <div></div>
+              </Paper>
+            </Grid2>
+            <Grid2 size={6}>
+              <Paper elevation={12} sx={statsTileSx}>
+                <div>Win Streak</div>
+                <div></div>
+              </Paper>
+            </Grid2>
+          </Grid2>
           <Typography sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
@@ -95,7 +141,7 @@ const Header = ({ clearGuesses }: Props) => {
         open={helpIsOpen}
         onClose={helpClose}
       >
-        <Box sx={boxSx}>
+        <Box sx={modalSx}>
           <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
             How to play
           </Typography>

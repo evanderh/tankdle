@@ -4,45 +4,32 @@ import { useSearchParams  } from 'react-router-dom';
 import ImageDisplay from '../components/ImageDisplay';
 import TankInput from '../components/TankInput';
 import GuessesList from '../components/GuessesList';
-import { getTankImage } from '../core/tanks';
-import { TankImage } from '../core/types';
+import { getTankImage } from "../core/game";
+import { getDaysSinceStart } from "../core/game";
 import Header from '../components/Header';
-
-export const maxGuesses = 6;
-export enum GameStatus { playing, win, loss };
-
-function getStatus(guesses: string[], tankImage: TankImage) {
-  if (guesses[guesses.length-1] === tankImage.tank.name) {
-    return GameStatus.win;
-  } else if (guesses.length >= maxGuesses) {
-    return GameStatus.loss;
-  }
-  return GameStatus.playing;
-}
-
-function getGuesses(key: string) {
-  return JSON.parse(localStorage.getItem(key) || '[]') as string[];
-}
+import { getGuesses, getGuessKey, getGameStatus } from '../core/game';
+import { GameStatus } from '../core/types';
 
 const Game = () => {
   const [searchParams, ] = useSearchParams();
   const tankNumber = searchParams.get('tank');
-  const guessesKey = `tank_guesses_${tankNumber}`;
 
   const tankImage = getTankImage(tankNumber);
+  const guessesKey = getGuessKey(tankNumber || getDaysSinceStart()+1);
+
   const [guesses, setGuesses] = useState<string[]>(getGuesses(guessesKey));
-  const [status, setStatus] = useState<GameStatus>(getStatus(guesses, tankImage));
+  const [status, setStatus] = useState<GameStatus>(getGameStatus(guesses, tankImage));
 
   const handleGuessSubmit = (guess: string) => setGuesses([...guesses, guess]);
   const clearGuesses = () => setGuesses([]);
 
   useEffect(() => {
-    setGuesses(getGuesses(guessesKey))
+    setGuesses(getGuesses(guessesKey));
   }, [guessesKey]);
 
   useEffect(() => {
-    setStatus(getStatus(guesses, tankImage));
-    localStorage.setItem(guessesKey, JSON.stringify(guesses))
+    setStatus(getGameStatus(guesses, tankImage));
+    localStorage.setItem(guessesKey, JSON.stringify(guesses));
   }, [guesses]);
 
   return (

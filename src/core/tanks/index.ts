@@ -103,22 +103,6 @@ export const tanks: Tank[] = [
   others,
 ].flatMap(c => Object.values(c));
 
-export const startDate = new Date('2024-09-01');
-
-export const getTankImage = (index: string | null): TankImage => {
-  if (index) {
-    const ix = Number(index) - 1;
-    if (!Number.isNaN(ix)) {
-      return tankImages[ix % tankImages.length];
-    }
-  }
-
-  const today = new Date();
-  const timeSince = today.getTime() - startDate.getTime();
-  const daysSince = Math.floor(timeSince / (1000 * 60 * 60 * 24));
-  return tankImages[daysSince % tankImages.length];
-};
-
 export const continentCode: {
   [key in TankOrigin]: Continent;
 } = {

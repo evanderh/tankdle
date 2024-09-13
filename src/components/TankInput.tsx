@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Autocomplete, TextField, Button, Grid2 } from '@mui/material';
 
 import { tanks } from '../core/tanks';
-import { GameStatus, maxGuesses } from '../pages/Game';
+import { maxGuesses } from '../core/game';
+import { GameStatus } from '../core/types';
 
 const suggestions = tanks.map(tank => tank.name).sort()
 

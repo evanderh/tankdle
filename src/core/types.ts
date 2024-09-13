@@ -80,3 +80,9 @@ export enum Continent {
   OC,
   SA,
 };
+
+export enum GameStatus {
+  playing,
+  win, 
+  loss,
+};

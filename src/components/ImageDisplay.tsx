@@ -1,4 +1,4 @@
-import { GameStatus } from "../pages/Game";
+import { GameStatus } from '../core/types';
 
 interface Props {
   imageUrl: string;

@@ -1,6 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { Grid2, Link as MuiLink, Paper, Typography } from '@mui/material';
-import { tankImages, startDate } from '../core/tanks';
+import { tankImages } from '../core/tanks';
+import { startDate } from "../core/game";
 import Header from '../components/Header';
 
 function addDays(date: Date, days: number): Date {
@@ -35,7 +36,7 @@ const Archive = () => {
           >
             <MuiLink
               component={RouterLink}
-              to={`/?tank=${ix+1}`}
+              to={`/?tank=${ix + 1}`}
             >
               {addDays(startDate, ix).toLocaleDateString()}
             </MuiLink>
