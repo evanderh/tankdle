@@ -1,4 +1,4 @@
-import { GameStatus } from "./Game";
+import { GameStatus } from "../pages/Game";
 
 interface Props {
   imageUrl: string;
@@ -18,7 +18,7 @@ const ImageDisplay = ({ imageUrl, attribution, status }: Props) => {
         src={imageUrl}
         alt="Tank of the day"
       />
-      {attribution && status !== 'playing' && (
+      {attribution && status !== GameStatus.playing && (
         <p
           style={{ fontSize: '0.75rem' }}
           dangerouslySetInnerHTML={{ __html: attribution }}

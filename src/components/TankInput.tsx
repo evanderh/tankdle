@@ -2,20 +2,20 @@ import { useState } from 'react';
 import { Autocomplete, TextField, Button, Grid2 } from '@mui/material';
 
 import { tanks } from '../core/tanks';
-import { GameStatus, maxGuesses } from './Game';
+import { GameStatus, maxGuesses } from '../pages/Game';
 
 const suggestions = tanks.map(tank => tank.name).sort()
 
 interface Props {
   onGuessSubmit: (guess: string) => void;
   numGuesses: number;
-  status: GameStatus;
+  isPlaying: boolean,
 }
 
 const TankInput = ({
   onGuessSubmit,
   numGuesses,
-  status,
+  isPlaying,
 }: Props) => {
   const [guess, setGuess] = useState('');
 
@@ -31,16 +31,16 @@ const TankInput = ({
 
   return (
     <>
-      {status === 'playing' &&
+      {isPlaying &&
         <h4 style={{ textAlign: 'end' }}>
-          Guess {1+numGuesses} of {maxGuesses}
+          Guess {1 + numGuesses} of {maxGuesses}
         </h4>
       }
       <Grid2 container spacing={1}>
         <Grid2 size="grow">
           <Autocomplete
             freeSolo
-            disabled={status !== 'playing'}
+            disabled={!isPlaying}
             autoHighlight
             options={suggestions}
             inputValue={guess}
@@ -62,7 +62,7 @@ const TankInput = ({
         <Grid2 size="auto">
           <Button
             onClick={handleSubmit}
-            disabled={status !== 'playing'}
+            disabled={!isPlaying}
             variant="contained"
             color="primary"
             sx={{ height: '100%', fontWeight: 'bold' }}

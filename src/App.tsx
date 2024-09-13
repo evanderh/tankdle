@@ -2,10 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, Container  } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
-import Home from './pages/Home';
 import Archive from './pages/Archive';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
+import Game from './pages/Game';
 
 const getTheme = (mode: 'dark' | 'light') =>
   createTheme({
@@ -43,9 +43,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container fixed maxWidth='sm'>
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Game />} />
           <Route path="/archive" element={<Archive />} />
         </Routes>
       </Container>

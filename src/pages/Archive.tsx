@@ -1,6 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { Grid2, Link as MuiLink, Paper, Typography } from '@mui/material';
 import { tankImages, startDate } from '../core/tanks';
+import Header from '../components/Header';
 
 function addDays(date: Date, days: number): Date {
   const result = new Date(date);
@@ -11,6 +12,7 @@ function addDays(date: Date, days: number): Date {
 const Archive = () => {
   return (
     <>
+      <Header />
       <Typography variant='h6' sx={{ margin: '1rem' }}>
         Archive
       </Typography>

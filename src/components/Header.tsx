@@ -19,13 +19,21 @@ const boxSx: SxProps = {
   p: 4,
 };
 
-const Header = () => {
+interface Props {
+  clearGuesses?: () => void;
+};
+
+const Header = ({ clearGuesses }: Props) => {
   const [statsIsOpen, setStatsOpen] = useState(false);
   const [helpIsOpen, setHelpOpen] = useState(false);
   const statsOpen = () => setStatsOpen(true);
   const statsClose = () => setStatsOpen(false);
   const helpOpen = () => setHelpOpen(true);
   const helpClose = () => setHelpOpen(false);
+  const clearStorage = () => {
+    clearGuesses && clearGuesses();
+    localStorage.clear();
+  }
 
   return (
     <Stack
@@ -124,6 +132,7 @@ const Header = () => {
               more fun and challenging to use a variety of vehicles.
             </li>
           </ul>
+          <Button onClick={clearStorage}>Clear storage</Button>
         </Box>
       </Modal>
 
