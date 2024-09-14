@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { Autocomplete, TextField, Button, Grid2 } from '@mui/material';
 
-import { tanks } from '../core/tanks';
+import { tankNames } from '../core/tanks';
 import { maxGuesses } from '../core/game';
-import { GameStatus } from '../core/types';
-
-const suggestions = tanks.map(tank => tank.name).sort()
 
 interface Props {
   onGuessSubmit: (guess: string) => void;
@@ -43,7 +40,7 @@ const TankInput = ({
             freeSolo
             disabled={!isPlaying}
             autoHighlight
-            options={suggestions}
+            options={tankNames}
             inputValue={guess}
             onInputChange={handleInputChange}
             renderInput={(params) => (

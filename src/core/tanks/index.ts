@@ -103,6 +103,8 @@ export const tanks: Tank[] = [
   others,
 ].flatMap(c => Object.values(c));
 
+export const tankNames = tanks.map(tank => tank.name).sort();
+
 export const continentCode: {
   [key in TankOrigin]: Continent;
 } = {

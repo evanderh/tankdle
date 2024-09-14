@@ -6,7 +6,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { Box, Grid2, IconButton, Modal, Paper, Stack, SxProps, Typography } from '@mui/material';
 import { useState } from 'react';
-import { getGamesPlayed, getGamesWon } from '../core/game';
+import { getDayStreak, getGamesPlayed, getGamesWon, getWinStreak } from '../core/game';
 
 const modalSx: SxProps = {
   position: 'absolute',
@@ -93,22 +93,22 @@ const Header = ({ clearGuesses }: Props) => {
           <Typography variant="h4" component="h2">
             Your Stats
           </Typography>
-          <Grid2 container spacing={4}>
+          <Grid2 container spacing={2}>
             <Grid2 size={4}>
               <Paper elevation={12} sx={statsTileSx}>
-                <div>Wins</div>
+                <div style={{ fontWeight: 'bold' }}>Wins</div>
                 <div>{wins}</div>
               </Paper>
             </Grid2>
             <Grid2 size={4}>
               <Paper elevation={12} sx={statsTileSx}>
-                <div>Losses</div>
+                <div style={{ fontWeight: 'bold' }}>Losses</div>
                 <div>{played - wins}</div>
               </Paper>
             </Grid2>
             <Grid2 size={4}>
               <Paper elevation={12} sx={statsTileSx}>
-                <div>Win Rate</div>
+                <div style={{ fontWeight: 'bold' }}>Win Rate</div>
                 <div>{(wins / played)
                   ? `${(wins / played * 100).toFixed(0)}%`
                   : '-'
@@ -117,14 +117,14 @@ const Header = ({ clearGuesses }: Props) => {
             </Grid2>
             <Grid2 size={6}>
               <Paper elevation={12} sx={statsTileSx}>
-                <div>Day Streak</div>
-                <div></div>
+                <div style={{ fontWeight: 'bold' }}>Day Streak</div>
+                <div>{ getDayStreak() }</div>
               </Paper>
             </Grid2>
             <Grid2 size={6}>
               <Paper elevation={12} sx={statsTileSx}>
-                <div>Win Streak</div>
-                <div></div>
+                <div style={{ fontWeight: 'bold' }}>Win Streak</div>
+                <div>{ getWinStreak() }</div>
               </Paper>
             </Grid2>
           </Grid2>

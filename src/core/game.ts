@@ -39,10 +39,10 @@ export const getTankImage = (index: string | null): TankImage => {
 
 export const getGamesWon = () => {
   let wins = 0;
-  for (let i = 0; i < tankImages.length; ++i) {
-    const guessesKey = getGuessKey(i+1);
+  for (let day = 0; day < tankImages.length; ++day) {
+    const guessesKey = getGuessKey(day+1);
     const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
-    const gameStatus = getGameStatus(guesses, tankImages[i]);
+    const gameStatus = getGameStatus(guesses, tankImages[day]);
     if (gameStatus === GameStatus.win) {
       wins += 1;
     }
@@ -62,4 +62,33 @@ export const getGamesPlayed = () => {
   return played;
 };
 
+export const getDayStreak = () => {
+  let streak = 0;
+  for (let day = getDaysSinceStart(); day >= 0; day--) {
+    const guessesKey = getGuessKey(day+1);
+    const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
+    const gameStatus = getGameStatus(guesses, tankImages[day]);
+    if (gameStatus !== GameStatus.playing) {
+      streak += 1;
+    } else {
+      break;
+    }
+  }
+  return streak;
+};
+
+export const getWinStreak = () => {
+  let streak = 0;
+  for (let day = getDaysSinceStart(); day >= 0; day--) {
+    const guessesKey = getGuessKey(day+1);
+    const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
+    const gameStatus = getGameStatus(guesses, tankImages[day]);
+    if (gameStatus === GameStatus.win) {
+      streak += 1;
+    } else {
+      break;
+    }
+  }
+  return streak;
+};
 
