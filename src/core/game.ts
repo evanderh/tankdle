@@ -15,38 +15,46 @@ export function getGameStatus(guesses: string[], tankImage: TankImage) {
   return GameStatus.playing;
 };
 
+export function getGameStatusByDate(date: Date) {
+  const dateString = date.toLocaleDateString();
+  const guessesKey = getGuessKey(dateString);
+  const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
+  const tankImage = getTankImage(dateString)
+  return getGameStatus(guesses, tankImage);
+}
+
 export function getGuesses(key: string) {
   return JSON.parse(localStorage.getItem(key) || '[]') as string[];
 };
 
-export const getGuessKey = (date: string | null) => {
+export function getGuessKey(date: string | null) {
   return `guesses_${date || (new Date()).toLocaleDateString()}`;
 }
 
-export const getDaysSince = (dateString: string | null) => {
+export function getDaysSince(dateString: string | null) {
   const date = dateString ? new Date(dateString) : new Date();
   const timeSince = date.getTime() - startDate.getTime();
   return Math.floor(timeSince / (1000 * 60 * 60 * 24));
 }
 
-export const getTankImage = (dateString: string | null): TankImage => {
+export function getTankImage(dateString: string | null): TankImage {
   return tankImages[getDaysSince(dateString) % tankImages.length];
 };
 
-export const getGamesWon = () => {
+export function getGamesWon() {
   let wins = 0;
-  // for (let day = 0; day < tankImages.length; ++day) {
-  //   const guessesKey = getGuessKey(day+1);
-  //   const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
-  //   const gameStatus = getGameStatus(guesses, tankImages[day]);
-  //   if (gameStatus === GameStatus.win) {
-  //     wins += 1;
-  //   }
-  // }
+  const date = new Date();
+  while (date >= startDate) {
+    const gameStatus = getGameStatusByDate(date);
+    if (gameStatus === GameStatus.win) {
+      wins += 1;
+    }
+    date.setDate(date.getDate() - 1);
+  }
   return wins;
 };
 
-export const getGamesPlayed = () => {
+export function getGamesPlayed() {
   const guessKeys = Object.keys(localStorage);
   let played = 0;
   for (const key of guessKeys) {
@@ -58,33 +66,32 @@ export const getGamesPlayed = () => {
   return played;
 };
 
-export const getDayStreak = () => {
+export function getDayStreak() {
   let streak = 0;
-  // for (let day = getDaysSinceStart(); day >= 0; day--) {
-  //   const guessesKey = getGuessKey(day+1);
-  //   const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
-  //   const gameStatus = getGameStatus(guesses, tankImages[day]);
-  //   if (gameStatus !== GameStatus.playing) {
-  //     streak += 1;
-  //   } else {
-  //     break;
-  //   }
-  // }
+  const date = new Date();
+  while (date >= startDate) {
+    const gameStatus = getGameStatusByDate(date);
+    if (gameStatus !== GameStatus.playing) {
+      streak += 1;
+    } else {
+      break;
+    }
+    date.setDate(date.getDate() - 1);
+  }
   return streak;
 };
 
-export const getWinStreak = () => {
+export function getWinStreak() {
   let streak = 0;
-  // for (let day = getDaysSinceStart(); day >= 0; day--) {
-  //   const guessesKey = getGuessKey(day+1);
-  //   const guesses = JSON.parse(localStorage.getItem(guessesKey) || '[]');
-  //   const gameStatus = getGameStatus(guesses, tankImages[day]);
-  //   if (gameStatus === GameStatus.win) {
-  //     streak += 1;
-  //   } else {
-  //     break;
-  //   }
-  // }
+  const date = new Date();
+  while (date >= startDate) {
+    const gameStatus = getGameStatusByDate(date);
+    if (gameStatus === GameStatus.win) {
+      streak += 1;
+    } else {
+      break;
+    }
+    date.setDate(date.getDate() - 1);
+  }
   return streak;
 };
-

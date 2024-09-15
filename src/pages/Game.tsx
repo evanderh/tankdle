@@ -11,10 +11,10 @@ import { tankNames } from '../core/tanks';
 
 const Game = () => {
   const [searchParams, ] = useSearchParams();
-  const date = searchParams.get('date');
+  const dateString = searchParams.get('date');
 
-  const tankImage = getTankImage(date);
-  const guessesKey = getGuessKey(date);
+  const tankImage = getTankImage(dateString);
+  const guessesKey = getGuessKey(dateString);
 
   const [guesses, setGuesses] = useState<string[]>(getGuesses(guessesKey));
   const [status, setStatus] = useState<GameStatus>(getGameStatus(guesses, tankImage));
