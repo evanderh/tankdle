@@ -20,7 +20,7 @@ const Game = () => {
   const [status, setStatus] = useState<GameStatus>(getGameStatus(guesses, tankImage));
 
   const handleGuessSubmit = (guess: string) => {
-    if (guess && tankNames.includes(guess)) {
+    if (guess && tankNames.includes(guess) && !guesses.includes(guess)) {
       setGuesses([...guesses, guess]);
     }
   };

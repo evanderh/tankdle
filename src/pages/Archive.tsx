@@ -15,6 +15,10 @@ const Archive = () => {
       {tankImages.map((tankImage, ix) => {
         const date = new Date(startDate);
         date.setDate(date.getDate() + ix);
+
+        if (date >= (new Date())) {
+          return;
+        }
         const dateString = date.toLocaleDateString();
 
         return (

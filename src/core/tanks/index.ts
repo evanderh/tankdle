@@ -88,6 +88,71 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-Type_88_tanks_01.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:Type_88_tanks_01.jpg">Mil.ru</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons',
   },
+  {
+    tank: russia.T26,
+    url: 'tanks/1024px-T-26_in_Kirovsk.jpeg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:T-26_in_Kirovsk.JPG">WolfDW</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: usa.Stryker,
+    url: 'tanks/1024px-Dragoon_at_Hohenfels.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Dragoon_at_Hohenfels.jpg">Photo Credit: Mr. Tad Browning, Lead Audiovisual Production Specialist, Test Documentation Team, U.S. Army Operational Test Command Public Affairs</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: russia.BMD4,
+    url: 'tanks/2008_Moscow_Victory_Day_Parade_-_BMD-4.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:2008_Moscow_Victory_Day_Parade_-_BMD-4.jpg">Пользователь</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M48,
+    url: 'tanks/1024px-NARA_111-CCV-372-CC33992_25th_Infantry_Division_M48A3_Patton_moving_through_Viet_Cong_territory_Operation_Lincoln_1966.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:NARA_111-CCV-372-CC33992_25th_Infantry_Division_M48A3_Patton_moving_through_Viet_Cong_territory_Operation_Lincoln_1966.jpg">SP4 Robert C. Lafoon, DASPO</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: russia.ISU152,
+    url: 'tanks/1024px-ISU-152-Berlin.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:ISU-152-Berlin.jpg">Franco Atirador</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M18,
+    url: 'tanks/1024px-M18_hellcat_side.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M18_hellcat_side.jpg">Benzene at English Wikipedia</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: russia.T64,
+    url: 'tanks/1024px-T-64AK_at_the_T-34_Tank_History_Museum.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:T-64AK_at_the_T-34_Tank_History_Museum.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M60,
+    url: 'tanks/1024px-M60A1_tank_of_the_US_Army_in_1975.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M60A1_tank_of_the_US_Army_in_1975.jpg">https://catalog.archives.gov/id/6399291</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: russia.T80,
+    url: 'tanks/1024px-4thTankBrigade_-_T-80U_-01.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:4thTankBrigade_-_T-80U_-01.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M10,
+    url: 'tanks/1024px-Tank_destroyers.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Tank_destroyers.jpg">United States Army</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: russia.BTR80,
+    url: 'tanks/1024px-Ukrainian_marines_-_Sea_Breeze_2010.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Ukrainian_marines_-_Sea_Breeze_2010.jpg">Kristopher Regan, U.S. Navy</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M103,
+    url: 'tanks/1024px-Amerikaans-Spaanse_marine-oefeningen,_Bestanddeelnr_917-0691.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Amerikaans-Spaanse_marine-oefeningen,_Bestanddeelnr_917-0691.jpg">Anefo</a>, CC0, via Wikimedia Commons',
+  },
+  {
+    tank: russia.T90,
+    url: 'tanks/1024px-T-90-ET_2010.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:T-90-ET_2010.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
 ];
 
 export const tanks: Tank[] = [

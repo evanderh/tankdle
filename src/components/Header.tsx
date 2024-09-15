@@ -90,7 +90,7 @@ const Header = ({ clearGuesses }: Props) => {
         onClose={statsClose}
       >
         <Box sx={modalSx}>
-          <Typography variant="h4" component="h2">
+          <Typography variant="h4" component="h2" sx={{ mb: 4 }}>
             Your Stats
           </Typography>
           <Grid2 container spacing={2}>
@@ -128,9 +128,6 @@ const Header = ({ clearGuesses }: Props) => {
               </Paper>
             </Grid2>
           </Grid2>
-          <Typography sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
         </Box>
       </Modal>
 
