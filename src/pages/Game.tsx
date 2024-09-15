@@ -1,31 +1,30 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams  } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 import ImageDisplay from '../components/ImageDisplay';
 import TankInput from '../components/TankInput';
 import GuessesList from '../components/GuessesList';
 import Header from '../components/Header';
 import { GameStatus } from '../core/types';
-import { getTankImage, getDaysSinceStart, getGuesses, getGuessKey, getGameStatus } from '../core/game';
-import { tanks } from '../core/tanks';
-
-const tankNames = tanks.map(tank => tank.name);
+import { getTankImage, getGuesses, getGuessKey, getGameStatus } from '../core/game';
+import { tankNames } from '../core/tanks';
 
 const Game = () => {
   const [searchParams, ] = useSearchParams();
-  const tankNumber = searchParams.get('tank');
+  const date = searchParams.get('date');
 
-  const tankImage = getTankImage(tankNumber);
-  const guessesKey = getGuessKey(tankNumber || getDaysSinceStart()+1);
+  const tankImage = getTankImage(date);
+  const guessesKey = getGuessKey(date);
 
   const [guesses, setGuesses] = useState<string[]>(getGuesses(guessesKey));
   const [status, setStatus] = useState<GameStatus>(getGameStatus(guesses, tankImage));
 
   const handleGuessSubmit = (guess: string) => {
-    if (guess && guess in tankNames) {
+    if (guess && tankNames.includes(guess)) {
       setGuesses([...guesses, guess]);
     }
   };
+
   const clearGuesses = () => setGuesses([]);
 
   useEffect(() => {

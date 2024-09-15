@@ -4,12 +4,6 @@ import { tankImages } from '../core/tanks';
 import { startDate } from "../core/game";
 import Header from '../components/Header';
 
-function addDays(date: Date, days: number): Date {
-  const result = new Date(date);
-  result.setDate(result.getDate() + days);
-  return result;
-}
-
 const Archive = () => {
   return (
     <>
@@ -18,31 +12,37 @@ const Archive = () => {
         Archive
       </Typography>
       <Grid2 container spacing={2}>
-      {tankImages.map((tankImage, ix) => (
-        <Grid2
-          size={{ xs: 4, sm: 3 }}
-          key={tankImage.tank.name}
-        >
-          <Paper
-            sx={{
-              paddingY: '1em',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textAlign: 'center',
-            }}
-            elevation={12}
+      {tankImages.map((tankImage, ix) => {
+        const date = new Date(startDate);
+        date.setDate(date.getDate() + ix);
+        const dateString = date.toLocaleDateString();
+
+        return (
+          <Grid2
+            size={{ xs: 4, sm: 3 }}
+            key={tankImage.tank.name}
           >
-            <MuiLink
-              component={RouterLink}
-              to={`/?tank=${ix + 1}`}
+            <Paper
+              sx={{
+                paddingY: '1em',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+              }}
+              elevation={12}
             >
-              {addDays(startDate, ix).toLocaleDateString()}
-            </MuiLink>
-          </Paper>
-        </Grid2>
-      ))}
+              <MuiLink
+                component={RouterLink}
+                to={`/?date=${encodeURIComponent(dateString)}`}
+              >
+                {dateString}
+              </MuiLink>
+            </Paper>
+          </Grid2>
+        )
+      })}
       </Grid2>
     </>
   );
