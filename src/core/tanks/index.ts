@@ -153,6 +153,26 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-T-90-ET_2010.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:T-90-ET_2010.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
   },
+  {
+    tank: usa.M1,
+    url: "tanks/1024px-United_States_Army_M1_Abrams_tanks_maneuver_in_firing_positions_during_REFORGER_'85.jpg",
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:United_States_Army_M1_Abrams_tanks_maneuver_in_firing_positions_during_REFORGER_%2785.jpg">https://catalog.archives.gov/id/6398920</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: japan.Type74,
+    url: 'tanks/1024px-Japanese_-_Type_74_tank_-_2.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Japanese_-_Type_74_tank_-_2.jpg">User:Megapixie</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: uk.Challenger1,
+    url: 'tanks/1024px-Challenger-ODS-1.jpeg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Challenger-ODS-1.JPEG">PHC HOLMES</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: uk.Centurion,
+    url: 'tanks/1024px-Centurion_Tank_AWM.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Centurion_Tank_AWM.jpg">CommanderOzEvolved</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
 ];
 
 export const tanks: Tank[] = [
