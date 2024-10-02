@@ -173,6 +173,31 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-Centurion_Tank_AWM.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:Centurion_Tank_AWM.jpg">CommanderOzEvolved</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
   },
+  {
+    tank: usa.M1,
+    url: 'tanks/1024px-U.S._Army_M1A2_Abrams_Iraq_2005_retouched.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:U.S._Army_M1A2_Abrams_Iraq_2005_retouched.jpg">DoD photo By Staff Sgt. Aaron Allmon, U.S. Air Force.</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: others.ArjunMkI,
+    url: 'tanks/1024px-Arjun_MK1A_field_trials.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Arjun_MK1A_field_trials.jpg">w:Defence Research and Development Organisation</a>, <a href="https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf">GODL-India</a>, via Wikimedia Commons',
+  },
+  {
+    tank: others.AlZarrar,
+    url: 'tanks/1024px-Alzarrar.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Alzarrar.jpg">Raza0007 at the English Wikipedia</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: others.K2,
+    url: 'tanks/1024px-Defense_White_Paper_2020_-_K2_Black_Panther_(cropped).png',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Defense_White_Paper_2020_-_K2_Black_Panther_(cropped).png">ROK Ministry of National Defense&#039;s public work is used according to Korea Open Government License (KOGL)</a> (<a href="http://www.kogl.or.kr/open/info/license_info/by.do">KOGL Type 1</a> or <a href="http://www.kogl.or.kr/open/info/license_info/by.do">KOGL Type 1</a>), via Wikimedia Commons',
+  },
+  {
+    tank: others.K1,
+    url: 'tanks/1024px-Field_Training_Exercise,_Republic_of_Korea_Army_11th_Division.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:2013.4.1_%EC%9C%A1%EA%B5%B011%EC%82%AC%EB%8B%A8_%EC%95%BC%EC%99%B8%EA%B8%B0%EB%8F%99%EC%A0%84%EC%88%A0%ED%9B%88%EB%A0%A8_Field_Training_Exercise,_Republic_of_Korea_Army_11th_Division_(8617306085).jpg">대한민국 국군 Republic of Korea Armed Forces</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons',
+  },
 ];
 
 export const tanks: Tank[] = [
