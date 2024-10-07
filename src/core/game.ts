@@ -56,12 +56,19 @@ export function getGamesWon() {
 
 export function getGamesPlayed() {
   const guessKeys = Object.keys(localStorage);
+  console.log(guessKeys)
   let played = 0;
   for (const key of guessKeys) {
-    const guesses = JSON.parse(localStorage.getItem(key) || '[]');
-    if (guesses.length > 0) {
-      played += 1;
+    console.log(key, localStorage.getItem(key))
+    try {
+      const guesses = JSON.parse(localStorage.getItem(key) || '[]');
+      if (guesses.length > 0) {
+        played += 1;
+      } 
+    } catch (error) {
+      console.warn(error);
     }
+    
   }
   return played;
 };

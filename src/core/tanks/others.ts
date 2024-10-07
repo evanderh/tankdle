@@ -489,8 +489,8 @@ export const M60APC: Tank = {
   speed: { km: 45, mi: 28 },
 };
 export const M80: Tank = {
-  name: 'M-80',
-  url: 'https://en.wikipedia.org/wiki/M-80_IFV',
+  name: 'BVP M-80',
+  url: 'https://en.wikipedia.org/wiki/BVP_M-80',
   role: TankRole.IFV,
   year: 1979,
   origin: TankOrigin.Yugoslavia,

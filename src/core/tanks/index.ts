@@ -198,6 +198,47 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-Field_Training_Exercise,_Republic_of_Korea_Army_11th_Division.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:2013.4.1_%EC%9C%A1%EA%B5%B011%EC%82%AC%EB%8B%A8_%EC%95%BC%EC%99%B8%EA%B8%B0%EB%8F%99%EC%A0%84%EC%88%A0%ED%9B%88%EB%A0%A8_Field_Training_Exercise,_Republic_of_Korea_Army_11th_Division_(8617306085).jpg">대한민국 국군 Republic of Korea Armed Forces</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons',
   },
+  {
+    tank: others.CM11,
+    url: 'tanks/1024px-ROCA_CM-11_in_Hukou_Camp_after_Exercise_20111105a.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:ROCA_CM-11_in_Hukou_Camp_after_Exercise_20111105a.jpg">玄史生</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: others.CM12,
+    url: 'tanks/1024px-CM-12_Tank_Ready_to_Transport_20120211a.jpeg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:CM-12_Tank_Ready_to_Transport_20120211a.JPG">玄史生</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: others.M84,
+    url: 'tanks/1024px-M-84_VS.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M-84_VS.jpg">Srđan Popovic</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: russia.T72,
+    url: 'tanks/1024px-Georgian_T-72Sim1_01.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Georgian_T-72Sim1_01.jpg">SGT Kalie Jones</a>, Public domain, via Wikimedia Commons',
+  },
+  {
+    tank: russia.T72,
+    url: 'tanks/1024px-T-72B_in_Chebarkul_training_ground.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:T-72B_in_Chebarkul_training_ground.jpg">Mil.ru</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M48,
+    url: 'tanks/1024px-M-48A5E2_Ejército_Español.jpeg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M-48A5E2_Ej%C3%A9rcito_Espa%C3%B1ol.JPG">Outisnn</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+
+  {
+    tank: usa.M26,
+    url: 'tanks/1024px-Tanks_at_the_USS_Alabama_-_Mobile,_AL_-_001.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Tanks_at_the_USS_Alabama_-_Mobile,_AL_-_001.jpg">Josh Hallett</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M4,
+    url: 'tanks/1024px-A_Sherman_tank_of_8th_Armoured_Brigade_in_Kevelaer,_Germany,_4_March_1945._B15145.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:A_Sherman_tank_of_8th_Armoured_Brigade_in_Kevelaer,_Germany,_4_March_1945._B15145.jpg">Hutchinson (Sgt), No 5 Army Film &amp; Photographic Unit</a>, Public domain, via Wikimedia Commons',
+  },
 ];
 
 export const tanks: Tank[] = [
