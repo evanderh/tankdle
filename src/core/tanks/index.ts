@@ -239,6 +239,42 @@ export const tankImages: TankImage[] = [
     url: 'tanks/1024px-A_Sherman_tank_of_8th_Armoured_Brigade_in_Kevelaer,_Germany,_4_March_1945._B15145.jpg',
     attribution: '<a href="https://commons.wikimedia.org/wiki/File:A_Sherman_tank_of_8th_Armoured_Brigade_in_Kevelaer,_Germany,_4_March_1945._B15145.jpg">Hutchinson (Sgt), No 5 Army Film &amp; Photographic Unit</a>, Public domain, via Wikimedia Commons',
   },
+  {
+    tank: usa.M103,
+    url: 'tanks/1024px-M103_tankfest_2024.jpeg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M103_tankfest_2024.JPG">Geni</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: russia.BMP1,
+    url: 'tanks/1024px-BWP-1_Baltops_2016_0283.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:BWP-1_Baltops_2016_0283.jpg">Konflikty.pl</a> (Attribution or Attribution), via Wikimedia Commons',
+  },
+  {
+    tank: usa.M113,
+    url: 'tanks/1024px-NTC_M113_OSV.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:NTC_M113_OSV.jpg">399scout</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: russia.BMP2,
+    url: 'tanks/1024px-Army2016demo-007.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Army2016demo-007.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M1117Guardian,
+    url: 'tanks/1024px-M1117_Guardian_on_March_25,_2024.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M1117_Guardian_on_March_25,_2024.jpg">George E. Koronaios</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: russia.BMP3,
+    url: 'tanks/1024px-Army2016demo-011.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:Army2016demo-011.jpg">Vitaly V. Kuzmin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons',
+  },
+  {
+    tank: usa.M3Stuart,
+    url: 'tanks/1024px-M3A3_Stuart_001.jpg',
+    attribution: '<a href="https://commons.wikimedia.org/wiki/File:M3A3_Stuart_001.jpg">No machine-readable author provided. Marko M~commonswiki assumed (based on copyright claims).</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons',
+  },
+
 ];
 
 export const tanks: Tank[] = [
